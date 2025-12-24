@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "name": "Example Club Name",
+    "role": "President",
+    "date": "Fall 2025",
+    "description": "Brief description of your involvement and responsibilities in this club or organization."
+  },
+  {
+    "id": 2,
+    "name": "Another Organization",
+    "role": "Member",
+    "date": "Spring 2024 - Present",
+    "description": "Description of your participation and what this organization does."
+  }
+]

@@ -1,0 +1,101 @@
+[
+  {
+    "id": 1,
+    "title": "Hunter Radar",
+    "tagline": "AI-integrated geolocation for hunters",
+    "description": "Flagship product of TriPoint Innovations LLC\nLoRa wireless technology for offline/online geolocation\nAI-integrated tracking for areas without cellular coverage\nDesigned for hunters and outdoor enthusiasts",
+    "role": "Cofounder & Lead Developer",
+    "date": "Fall 2025",
+    "tech": ["LoRa", "AI/ML", "Embedded Systems", "IoT", "Wireless Communication"],
+    "images": [
+      {
+        "src": "/HunterRadar1.jpg",
+        "title": "Hunter Radar - Device Overview",
+        "description": "Overview of the Hunter Radar tracking device showing the LoRa-enabled hardware design."
+      },
+      {
+        "src": "/HunterRadar2.jpg",
+        "title": "Hunter Radar - Tracking Interface",
+        "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
+      }
+    ],
+    "links": {
+      "github": ""
+    },
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "6.7L Cummins Cost Reduction Engineering",
+    "tagline": "Manufacturing cost optimization",
+    "description": "Led cost savings initiative for 6.7L Cummins remanufacturing\nAnalyzed manufacturing processes and identified efficiency improvements\nImplemented design changes to reduce production costs\nMaintained quality standards throughout optimization",
+    "role": "New Product Development Intern",
+    "date": "Summer 2025",
+    "tech": ["Process Engineering", "Cost Analysis", "Manufacturing", "CAD", "Quality Control"],
+    "images": [
+      {
+        "src": "/6.71.jpg",
+        "title": "6.7L Cummins - Aftermarket Assembly",
+        "description": "6.7L Cummins assembly with aftermarket components validated through 40 hour dynamometer testing to verify durability, performance, and system integrity"
+      },
+      {
+        "src": "/6.72.jpg",
+        "title": "6.7L Cummins - Aftermarket Part Validation",
+        "description": "Disassembled the engine and performed detailed measurements on each component to evaluate multiple aftermarket part combinations per cylinder following the dynamometer test"
+      }
+    ],
+    "links": {},
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "NPDC Product Development Work",
+    "tagline": "Product development at OSU",
+    "description": "Mechanical engineering projects at OSU's New Product Development Center\nWorked with LateraLift LLC, a new shoelace holder develpoment, and Hopkins Manufacturing Corporation\nApplied CAD and SolidWorks for design documentation\nPrototyping and engineering analysis for real-world challenges",
+    "role": "Mechanical Engineering Intern",
+    "date": "Fall 2025",
+    "tech": ["CAD", "SolidWorks", "Prototyping", "Engineering Analysis"],
+    "images": [
+      {
+        "src": "/NPDC1.jpg",
+        "title": "NPDC - CAD Design Work",
+        "description": "CAD and SolidWorks design documentation for product development projects at OSU's New Product Development Center."
+      },
+      {
+        "src": "/NPDC2.jpg",
+        "title": "NPDC - Prototyping & Analysis",
+        "description": "Prototyping and engineering analysis work for LateraLift LLC and Hopkins Manufacturing Corporation."
+      }
+    ],
+    "links": {},
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "OSU Homecoming Engineering Build",
+    "tagline": "Integrated electromechanical system",
+    "description": "Built integrated system with electrical control hardware and proximity sensors\nDeveloped control logic for state detection and event sequencing\nModeled moving mechanical components for feasibility\nIterated through hardware-software integration and debugging",
+    "role": "Systems Integration Engineer",
+    "date": "Fall 2025",
+    "tech": ["Electrical Systems", "Proximity Sensors", "Control Logic", "Mechanical Modeling", "Systems Integration", "Hardware Debugging"],
+    "images": [
+      {
+        "src": "/HOCO1.jpg",
+        "title": "OSU Homecoming - Electrical Control Hardware",
+        "description": "Integrated electrical control hardware with proximity sensors for state detection and event sequencing, wiring a control box to interface a PLC with 120V motors"
+      },
+      {
+        "src": "/HOCO2.jpeg",
+        "title": "OSU Homecoming - Mechanical Components",
+        "description": "Modeled moving mechanical components for feasibility analysis and integration."
+      },
+      {
+        "src": "/HOCO3.jpg",
+        "title": "OSU Homecoming - Systems Integration",
+        "description": "Final hardware-software integration showing the complete electromechanical system after debugging."
+      }
+    ],
+    "links": {},
+    "featured": true
+  }
+]

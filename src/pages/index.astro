@@ -1,0 +1,1466 @@
+---
+import SEO from '../components/SEO.astro';
+import Sidebar from '../components/Sidebar.astro';
+import SinglePageFooter from '../components/SinglePageFooter.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import InvolvementCard from '../components/InvolvementCard.astro';
+import profileData from '../data/profile.json';
+import projectsData from '../data/projects.json';
+import experienceData from '../data/experience.json';
+import involvementData from '../data/involvement.json';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <SEO
+      title={`${profileData.name} - ${profileData.headline}`}
+      description={profileData.shortBio}
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="min-h-screen flex flex-col bg-black text-white transition-colors font-mono">
+    <!-- Grid Background with Flashlight Effect -->
+    <div id="grid-bg" class="fixed inset-0 pointer-events-none z-0"></div>
+
+    <!-- Page Content Wrapper for Self-Destruct Animation -->
+    <div id="page-wrapper" class="min-h-screen flex flex-col">
+      <a
+        href="#home"
+        class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-orange-500 focus:text-black"
+      >
+        Skip to content
+      </a>
+
+      <Sidebar />
+
+      <!-- ===== LOCK EASTER EGG TRIGGER ===== -->
+      <!-- Hidden lock icon in top-right, only visible on hover -->
+      <button
+        id="lock-trigger"
+        class="lock-trigger"
+        aria-label="Unlock secret"
+        title="Unlock"
+      >
+        <svg class="lock-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      </button>
+
+    <main id="main-content" class="flex-1 relative z-10">
+      <!-- HOME SECTION -->
+      <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
+            {profileData.name}
+          </h1>
+          <p class="text-xl sm:text-2xl text-gray-400 mb-4 animate-slide-up" style="animation-delay: 0.1s;">
+            {profileData.headline}
+          </p>
+          <p class="text-lg text-gray-500 mb-8 animate-slide-up" style="animation-delay: 0.15s;">
+            {profileData.school}
+          </p>
+          <p class="text-base text-gray-300 mb-12 max-w-2xl mx-auto animate-slide-up leading-relaxed" style="animation-delay: 0.2s;">
+            {profileData.shortBio}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center animate-slide-up" style="animation-delay: 0.3s;">
+            <a
+              href="#contact"
+              class="px-8 py-3 bg-orange-500 text-black border border-orange-500 font-medium hover:bg-orange-600 hover:border-orange-600 transition-colors"
+            >
+              → Contact
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <div class="flex items-start justify-between mb-12 gap-4">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white">
+              <span class="text-orange-500">[</span>About<span class="text-orange-500">]</span>
+            </h2>
+            <a
+              id="resume-download-btn"
+              href="/resume.pdf"
+              download
+              class="inline-flex items-center px-6 py-2 bg-orange-500 text-black border border-orange-500 font-medium hover:bg-orange-600 hover:border-orange-600 transition-colors text-sm whitespace-nowrap"
+            >
+              <svg class="w-4 h-4 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              <span id="resume-btn-text">Download Resume</span>
+            </a>
+          </div>
+
+          <div class="space-y-6 text-gray-300 leading-relaxed text-lg font-sans">
+            {profileData.longBio.split('\n\n').map((paragraph) => (
+              <p>{paragraph}</p>
+            ))}
+          </div>
+
+          <div class="mt-16 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="border-l-2 border-orange-500 pl-6">
+              <p class="text-sm text-gray-400 mb-2">
+                // Education
+              </p>
+              <p class="text-lg font-semibold text-white mb-1">
+                {profileData.major}
+              </p>
+              <p class="text-gray-400">
+                <span id="osu-easter-egg-trigger" class="cursor-default">
+                  {profileData.school}
+                </span>
+              </p>
+              <p class="text-sm text-gray-500 mt-1">
+                {profileData.classStanding}
+              </p>
+            </div>
+
+            <div class="border-l-2 border-orange-500 pl-6">
+              <p class="text-sm text-gray-400 mb-2">
+                // GPA
+              </p>
+              <p class="text-lg font-semibold text-white">
+                3.75
+              </p>
+            </div>
+
+            <div class="border-l-2 border-orange-500 pl-6">
+              <p class="text-sm text-gray-400 mb-2">
+                // Location
+              </p>
+              <p class="text-lg text-white">
+                {profileData.location}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PROJECTS SECTION -->
+      <section id="projects" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <div class="mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+              <span class="text-orange-500">[</span>Projects<span class="text-orange-500">]</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl">
+              Engineering projects and product development work
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {projectsData.map((project) => (
+              <ProjectCard
+                title={project.title}
+                tagline={project.tagline}
+                description={project.description}
+                role={project.role}
+                date={project.date}
+                tech={project.tech}
+                images={project.images}
+                links={project.links}
+                featured={project.featured}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPERIENCE SECTION -->
+      <section id="experience" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-16">
+            <span class="text-orange-500">[</span>Experience<span class="text-orange-500">]</span>
+          </h2>
+
+          <div class="space-y-12">
+            {experienceData.map((exp) => (
+              <div class="relative pl-8 border-l border-gray-700">
+                <div class="absolute w-2 h-2 bg-orange-500 -left-[5px] top-1"></div>
+
+                <div class="mb-2">
+                  <h3 class="text-2xl font-semibold text-white">
+                    {exp.title}
+                  </h3>
+                  <p class="text-lg text-gray-400 mt-1">
+                    {exp.company}
+                  </p>
+                  <p class="text-sm text-gray-500 mt-1">
+                    {exp.location} • {exp.period}
+                  </p>
+                </div>
+
+                <p class="text-gray-300 mb-4 leading-relaxed font-sans">
+                  {exp.description}
+                </p>
+
+                {exp.achievements.length > 0 && (
+                  <ul class="space-y-2 text-gray-300 font-sans">
+                    {exp.achievements.map((achievement) => (
+                      <li class="flex items-start">
+                        <span class="text-orange-500 mr-2">→</span>
+                        <span>{achievement}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- INVOLVEMENT SECTION -->
+      <section id="involvement" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <div class="mb-16">
+            <h2 class="text-4xl sm:text-5xl font-bold text-white mb-4">
+              <span class="text-orange-500">[</span>Involvement<span class="text-orange-500">]</span>
+            </h2>
+            <p class="text-xl text-gray-400 max-w-2xl">
+              Clubs, organizations, and affiliations
+            </p>
+          </div>
+
+          <div class="space-y-6">
+            {involvementData.map((item) => (
+              <InvolvementCard
+                name={item.name}
+                role={item.role}
+                date={item.date}
+                description={item.description}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <!-- SKILLS SECTION -->
+      <section id="skills" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-16">
+            <span class="text-orange-500">[</span>Skills<span class="text-orange-500">]</span>
+          </h2>
+
+          <div class="border border-gray-700 rounded p-8">
+            <div class="text-sm text-gray-400 mb-6"><span class="text-orange-500">></span> skills --list</div>
+            <div class="flex flex-wrap gap-3">
+              {['SolidWorks', 'AutoCAD', 'Python', 'MATLAB', 'LabVIEW', 'Mechanical Design', 'Engineering Analysis', 'DFM & Cost Reduction', 'Systems Thinking', 'Prototyping & Testing', 'Manufacturing Processes', 'Process Improvement', 'CAD Documentation', 'Data Organization', 'Technical Documentation', 'Project Coordination', 'PPAP & Customer Communication', 'Problem Solving', 'Critical Thinking', 'Technical Communication'].map((skill) => (
+                <span class="border border-white rounded px-4 py-2 text-sm text-white">
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="py-32 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-4xl mx-auto border border-white rounded-lg p-12 sm:p-16">
+          <h2 class="text-4xl sm:text-5xl font-bold text-white mb-16">
+            <span class="text-orange-500">[</span>Contact<span class="text-orange-500">]</span>
+          </h2>
+
+          <div class="border border-gray-700 rounded p-10">
+            <div class="space-y-6">
+              <div class="flex items-start gap-3">
+                <span class="text-gray-400 text-sm">Email:</span>
+                <a
+                  href="mailto:24lozanom@gmail.com"
+                  class="text-white hover:text-orange-500 transition-colors underline"
+                >
+                  24lozanom@gmail.com
+                </a>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-gray-400 text-sm">LinkedIn:</span>
+                <a
+                  href="https://www.linkedin.com/in/myles-lozano"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-orange-500 transition-colors underline break-all"
+                >
+                  https://www.linkedin.com/in/myles-lozano
+                </a>
+              </div>
+
+              <div class="flex items-start gap-3">
+                <span class="text-gray-400 text-sm">GitHub:</span>
+                <a
+                  href="https://github.com/MylesLozano24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="text-white hover:text-orange-500 transition-colors underline break-all"
+                >
+                  https://github.com/MylesLozano24
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+      <SinglePageFooter />
+    </div>
+    <!-- End Page Wrapper -->
+
+    <!-- ===== LOCK EASTER EGG OVERLAYS ===== -->
+
+    <!-- Password Modal -->
+    <div id="password-modal" class="hidden fixed inset-0 z-[150] flex items-center justify-center p-4">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" id="password-modal-backdrop"></div>
+
+      <!-- Password panel -->
+      <div class="relative bg-black border-2 border-orange-500 rounded p-8 max-w-md w-full">
+        <!-- Close button -->
+        <button
+          id="password-close"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-2xl leading-none"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <!-- Terminal header -->
+        <div class="mb-6">
+          <p class="text-orange-500 text-sm mb-2">> auth --unlock</p>
+        </div>
+
+        <!-- Password input -->
+        <div class="mb-4">
+          <input
+            type="password"
+            id="password-input"
+            class="w-full bg-gray-950 border border-gray-700 rounded px-4 py-2 text-white font-mono focus:outline-none focus:border-orange-500 transition-colors"
+            placeholder="Enter password..."
+            autocomplete="off"
+          />
+        </div>
+
+        <!-- Error message -->
+        <p id="password-error" class="text-red-500 text-sm font-mono hidden">
+          error: invalid key
+        </p>
+      </div>
+    </div>
+
+    <!-- Secret Overlay (TODO: Add your secret content here) -->
+    <div id="secret-overlay" class="hidden fixed inset-0 z-[160] flex items-center justify-center p-4">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-md" id="secret-overlay-backdrop"></div>
+
+      <!-- Secret content panel -->
+      <div class="relative bg-black border-2 border-orange-500 rounded p-12 max-w-2xl w-full">
+        <!-- Close button -->
+        <button
+          id="secret-close"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-2xl leading-none"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <!-- ===== EDIT SECRET CONTENT BELOW ===== -->
+        <div class="text-center">
+          <h2 class="text-4xl font-bold text-orange-500 mb-4">
+            Unlocked
+          </h2>
+          <p class="text-xl text-gray-300 mb-6 font-sans">
+            TODO: Add secret content here
+          </p>
+          <p class="text-sm text-gray-500 font-mono">
+            // Edit this section in index.astro<br/>
+            // Search for "EDIT SECRET CONTENT BELOW"
+          </p>
+        </div>
+        <!-- ===== EDIT SECRET CONTENT ABOVE ===== -->
+      </div>
+    </div>
+
+    <!-- Image Modal -->
+    <div id="image-modal" class="hidden fixed inset-0 z-[100] bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+      <div class="max-w-4xl w-full relative">
+        <button
+          onclick="closeImageModal()"
+          class="absolute -top-10 right-0 text-white hover:text-orange-500 transition-colors text-3xl leading-none z-10 bg-black/50 w-8 h-8 rounded-full flex items-center justify-center"
+          aria-label="Close modal"
+        >
+          ×
+        </button>
+
+        <div class="bg-black border-2 border-white rounded-lg overflow-hidden shadow-2xl">
+          <img
+            id="modal-image"
+            src=""
+            alt="Project screenshot"
+            class="w-full h-auto max-h-[60vh] object-contain bg-gray-950"
+          />
+          <div class="p-6 border-t border-gray-700">
+            <h3 id="modal-title" class="text-xl font-semibold text-white mb-2"></h3>
+            <p id="modal-description" class="text-gray-300 text-sm font-sans leading-relaxed"></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Click outside to close -->
+      <div
+        class="absolute inset-0 -z-10"
+        onclick="closeImageModal()"
+      ></div>
+    </div>
+
+    <script is:inline>
+      function initializeTheme() {
+        const getThemePreference = () => {
+          if (typeof localStorage !== 'undefined' && localStorage.getItem('theme')) {
+            return localStorage.getItem('theme');
+          }
+          return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        };
+
+        const setTheme = (theme) => {
+          if (theme === 'dark') {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+          localStorage.setItem('theme', theme);
+        };
+
+        const toggleTheme = () => {
+          const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          setTheme(newTheme);
+        };
+
+        setTheme(getThemePreference());
+
+        const themeToggle = document.getElementById('theme-toggle');
+        const mobileThemeToggle = document.getElementById('mobile-theme-toggle');
+
+        themeToggle?.addEventListener('click', toggleTheme);
+        mobileThemeToggle?.addEventListener('click', toggleTheme);
+      }
+
+      initializeTheme();
+      document.addEventListener('astro:after-swap', initializeTheme);
+    </script>
+
+    <script is:inline>
+      function initializeGridBackground() {
+        const gridBg = document.getElementById('grid-bg');
+        if (!gridBg) return;
+
+        // Track mouse position
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (e) => {
+          mouseX = e.clientX;
+          mouseY = e.clientY;
+
+          // Update CSS variables for the flashlight position
+          gridBg.style.setProperty('--mouse-x', `${mouseX}px`);
+          gridBg.style.setProperty('--mouse-y', `${mouseY}px`);
+        });
+
+        // Initialize with center position
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+        gridBg.style.setProperty('--mouse-x', `${centerX}px`);
+        gridBg.style.setProperty('--mouse-y', `${centerY}px`);
+      }
+
+      initializeGridBackground();
+      document.addEventListener('astro:after-swap', initializeGridBackground);
+    </script>
+
+    <script is:inline>
+      /**
+       * Self-Destruct Easter Egg
+       *
+       * How it works:
+       * 1. Explosion: CSS-only particle effect using box-shadows positioned at button center
+       * 2. Page Fall: Entire page wrapper translates down 100vh and fades out
+       * 3. Reset: After 5s, content fades back in and returns to original position
+       * 4. Lock: Animation state prevents retriggering during playback
+       */
+      function initializeSelfDestruct() {
+        const btn = document.getElementById('self-destruct-btn');
+        const pageWrapper = document.getElementById('page-wrapper');
+
+        if (!btn || !pageWrapper) return;
+
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        let isAnimating = false;
+
+        btn.addEventListener('click', function(e) {
+          // Prevent retriggering during animation
+          if (isAnimating) return;
+
+          // Respect reduced motion preference
+          if (prefersReducedMotion) {
+            console.log('Self-destruct disabled: user prefers reduced motion');
+            return;
+          }
+
+          isAnimating = true;
+
+          // Get button position for countdown overlay
+          const rect = btn.getBoundingClientRect();
+          const buttonCenterX = rect.left + rect.width / 2;
+          const buttonCenterY = rect.top + rect.height / 2;
+
+          // Create countdown overlay
+          const countdown = document.createElement('div');
+          countdown.className = 'countdown-overlay';
+          countdown.style.left = buttonCenterX + 'px';
+          countdown.style.top = buttonCenterY + 'px';
+          document.body.appendChild(countdown);
+
+          // Countdown sequence: 3, 2, 1
+          let count = 3;
+          countdown.textContent = count;
+          countdown.classList.add('show');
+
+          const countdownInterval = setInterval(() => {
+            count--;
+            if (count > 0) {
+              countdown.textContent = count;
+              // Trigger scale animation
+              countdown.classList.remove('pulse');
+              void countdown.offsetWidth; // Force reflow
+              countdown.classList.add('pulse');
+            } else {
+              clearInterval(countdownInterval);
+              countdown.remove();
+
+              // Trigger explosion after countdown
+              const explosion = document.createElement('div');
+              explosion.className = 'explosion';
+              explosion.style.left = buttonCenterX + 'px';
+              explosion.style.top = buttonCenterY + 'px';
+              document.body.appendChild(explosion);
+
+              // Trigger explosion animation
+              requestAnimationFrame(() => {
+                explosion.classList.add('explode');
+              });
+
+              // Start page fall after short delay (150ms)
+              setTimeout(() => {
+                pageWrapper.classList.add('self-destruct-fall');
+              }, 150);
+
+              // Reset everything after 5 seconds
+              setTimeout(() => {
+                // Remove explosion element
+                explosion.remove();
+
+                // Reset page position
+                pageWrapper.classList.remove('self-destruct-fall');
+
+                // Re-enable button after reset completes
+                setTimeout(() => {
+                  isAnimating = false;
+                }, 1000);
+              }, 5000);
+            }
+          }, 1000); // 1 second per count
+        });
+      }
+
+      initializeSelfDestruct();
+      document.addEventListener('astro:after-swap', initializeSelfDestruct);
+    </script>
+
+    <script is:inline>
+      /**
+       * BULLET THE HORSE EASTER EGG
+       *
+       * Trigger: Click on "Oklahoma State University" text in Education section
+       * Behavior:
+       * 1. Show notification "Here comes Bullet!" at top center (2s)
+       * 2. Animate Bullet.png galloping from right to left across screen (6s)
+       * 3. Horse appears behind content, sized relative to main heading
+       * 4. Includes subtle gallop rotation animation
+       * 5. Auto cleanup after animation completes
+       */
+      function initializeBulletEasterEgg() {
+        const trigger = document.getElementById('osu-easter-egg-trigger');
+        if (!trigger) return;
+
+        // Check for reduced motion preference
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        let isAnimating = false;
+
+        trigger.addEventListener('click', function() {
+          // Prevent retriggering during animation
+          if (isAnimating) return;
+
+          // Respect reduced motion preference
+          if (prefersReducedMotion) {
+            console.log('Bullet easter egg disabled: user prefers reduced motion');
+            return;
+          }
+
+          isAnimating = true;
+
+          // 1. Create and show notification
+          const notification = document.createElement('div');
+          notification.className = 'bullet-notification';
+          notification.textContent = 'Here comes Bullet!';
+          document.body.appendChild(notification);
+
+          // Trigger fade in
+          requestAnimationFrame(() => {
+            notification.classList.add('show');
+          });
+
+          // Fade out notification after 1.5s
+          setTimeout(() => {
+            notification.classList.add('fade-out');
+
+            // Remove notification after fade completes
+            setTimeout(() => {
+              notification.remove();
+            }, 500);
+          }, 1500);
+
+          // 2. Create and animate Bullet the horse (starts as notification fades)
+          setTimeout(() => {
+            const bulletContainer = document.createElement('div');
+            bulletContainer.className = 'bullet-container';
+
+            const bulletImg = document.createElement('img');
+            bulletImg.src = '/Bullet.png';
+            bulletImg.alt = 'Bullet the horse';
+            bulletImg.className = 'bullet-horse';
+
+            bulletContainer.appendChild(bulletImg);
+            document.body.appendChild(bulletContainer);
+
+            // Trigger gallop animation
+            requestAnimationFrame(() => {
+              bulletContainer.classList.add('galloping');
+            });
+
+            // Clean up after animation completes (10 seconds)
+            setTimeout(() => {
+              bulletContainer.remove();
+              isAnimating = false;
+            }, 10000);
+          }, 1800);
+        });
+      }
+
+      initializeBulletEasterEgg();
+      document.addEventListener('astro:after-swap', initializeBulletEasterEgg);
+    </script>
+
+    <script is:inline>
+      /**
+       * LOCK EASTER EGG - PASSWORD PROTECTED SECRET OVERLAY
+       *
+       * Correct password: MJL
+       *
+       * Flow:
+       * 1. Click hidden lock icon in top-right
+       * 2. Password modal appears
+       * 3. Enter correct password "MJL" and press Enter
+       * 4. Secret overlay opens (easy to customize - search "EDIT SECRET CONTENT")
+       */
+      function initializeLockEasterEgg() {
+        // Elements
+        const lockTrigger = document.getElementById('lock-trigger');
+        const passwordModal = document.getElementById('password-modal');
+        const passwordInput = document.getElementById('password-input');
+        const passwordError = document.getElementById('password-error');
+        const passwordClose = document.getElementById('password-close');
+        const passwordBackdrop = document.getElementById('password-modal-backdrop');
+        const secretOverlay = document.getElementById('secret-overlay');
+        const secretClose = document.getElementById('secret-close');
+        const secretBackdrop = document.getElementById('secret-overlay-backdrop');
+
+        if (!lockTrigger || !passwordModal || !passwordInput || !secretOverlay) return;
+
+        const CORRECT_PASSWORD = 'MJL';
+
+        // Open password modal
+        function openPasswordModal() {
+          passwordModal.classList.remove('hidden');
+          passwordInput.value = '';
+          passwordError.classList.add('hidden');
+          // Focus input for accessibility
+          setTimeout(() => passwordInput.focus(), 100);
+        }
+
+        // Close password modal
+        function closePasswordModal() {
+          passwordModal.classList.add('hidden');
+          passwordInput.value = '';
+          passwordError.classList.add('hidden');
+        }
+
+        // Open secret overlay
+        function openSecretOverlay() {
+          secretOverlay.classList.remove('hidden');
+        }
+
+        // Close secret overlay
+        function closeSecretOverlay() {
+          secretOverlay.classList.add('hidden');
+        }
+
+        // Show error with shake animation
+        function showError() {
+          passwordError.classList.remove('hidden');
+          passwordInput.classList.add('shake-error');
+          setTimeout(() => {
+            passwordInput.classList.remove('shake-error');
+          }, 500);
+        }
+
+        // Check password
+        function checkPassword() {
+          const entered = passwordInput.value.trim();
+          if (entered === CORRECT_PASSWORD) {
+            // Correct password
+            closePasswordModal();
+            openSecretOverlay();
+          } else {
+            // Incorrect password
+            showError();
+            passwordInput.value = '';
+          }
+        }
+
+        // Event Listeners
+        lockTrigger.addEventListener('click', openPasswordModal);
+
+        passwordClose.addEventListener('click', closePasswordModal);
+        passwordBackdrop.addEventListener('click', closePasswordModal);
+
+        secretClose.addEventListener('click', closeSecretOverlay);
+        secretBackdrop.addEventListener('click', closeSecretOverlay);
+
+        // Enter key submits password
+        passwordInput.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter') {
+            checkPassword();
+          }
+        });
+
+        // Escape key closes modals
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            if (!passwordModal.classList.contains('hidden')) {
+              closePasswordModal();
+            } else if (!secretOverlay.classList.contains('hidden')) {
+              closeSecretOverlay();
+            }
+          }
+        });
+      }
+
+      initializeLockEasterEgg();
+      document.addEventListener('astro:after-swap', initializeLockEasterEgg);
+    </script>
+
+    <style is:global>
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+
+      @layer base {
+        html {
+          scroll-behavior: smooth;
+        }
+
+        body {
+          @apply antialiased;
+          font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+          font-family: 'JetBrains Mono', 'Courier New', monospace;
+        }
+
+        .font-sans {
+          font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        ::selection {
+          @apply bg-orange-500 text-black;
+        }
+
+        :focus-visible {
+          @apply outline-none ring-2 ring-orange-500 ring-offset-2 ring-offset-black;
+        }
+      }
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .focus\:not-sr-only:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        padding: 0;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+        white-space: normal;
+      }
+
+      /* Grid Background with Flashlight Effect */
+      #grid-bg {
+        --mouse-x: 50%;
+        --mouse-y: 50%;
+        background-color: #000000;
+        background-image:
+          linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        background-position: -1px -1px;
+      }
+
+      /* Flashlight effect using radial gradient mask */
+      #grid-bg::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          600px circle at var(--mouse-x) var(--mouse-y),
+          rgba(255, 255, 255, 0.06),
+          transparent 40%
+        );
+        pointer-events: none;
+      }
+
+      /* Enhanced grid visibility in the flashlight area */
+      #grid-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image:
+          linear-gradient(rgba(255, 120, 0, 0.03) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 120, 0, 0.03) 1px, transparent 1px);
+        background-size: 50px 50px;
+        background-position: -1px -1px;
+        mask-image: radial-gradient(
+          400px circle at var(--mouse-x) var(--mouse-y),
+          rgba(0, 0, 0, 0.8),
+          transparent 60%
+        );
+        -webkit-mask-image: radial-gradient(
+          400px circle at var(--mouse-x) var(--mouse-y),
+          rgba(0, 0, 0, 0.8),
+          transparent 60%
+        );
+        pointer-events: none;
+      }
+
+      /* ===== SELF-DESTRUCT EASTER EGG ANIMATIONS ===== */
+
+      /**
+       * COUNTDOWN OVERLAY
+       * - Small orange numbers counting down from 3 to 1
+       * - Positioned above self-destruct button
+       * - Pulses with each number change
+       */
+      .countdown-overlay {
+        position: fixed;
+        transform: translate(-50%, -50%);
+        font-size: 1.5rem;
+        font-weight: normal;
+        color: #f97316;
+        z-index: 9998;
+        opacity: 0;
+        pointer-events: none;
+        text-shadow: 0 0 10px rgba(249, 115, 22, 0.6),
+                     0 0 20px rgba(249, 115, 22, 0.3);
+        transition: opacity 0.2s ease-in-out;
+      }
+
+      .countdown-overlay.show {
+        opacity: 1;
+      }
+
+      .countdown-overlay.pulse {
+        animation: countdown-pulse 0.3s ease-out;
+      }
+
+      @keyframes countdown-pulse {
+        0% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+        50% {
+          transform: translate(-50%, -50%) scale(1.3);
+        }
+        100% {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+
+      /* Disable countdown animation for reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .countdown-overlay.pulse {
+          animation: none;
+        }
+      }
+
+      /**
+       * EXTRAVAGANT CHAOTIC EXPLOSION EFFECT
+       * - Massive particle burst with 30+ particles
+       * - Multiple colors: orange, red, yellow, white for realistic fire
+       * - Erratic, randomized trajectories for chaos
+       * - Multi-layered depth with staggered animations
+       * - Particles of varying sizes (4px to 12px)
+       */
+      .explosion {
+        position: fixed;
+        width: 1px;
+        height: 1px;
+        pointer-events: none;
+        z-index: 9999;
+        transform: translate(-50%, -50%);
+      }
+
+      /* First wave: Large orange/red particles */
+      .explosion::before,
+      .explosion::after {
+        content: '';
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #ff4500;
+        opacity: 0;
+      }
+
+      /* Massive chaotic explosion - Main wave with 30+ particles in all directions */
+      @keyframes explode {
+        0% {
+          opacity: 1;
+          transform: scale(0) rotate(0deg);
+          box-shadow:
+            /* Center flash - bright white */
+            0 0 20px 10px rgba(255, 255, 255, 1),
+            /* Primary ring - large orange particles */
+            15px 0 0 2px rgba(255, 120, 0, 1),
+            -15px 0 0 2px rgba(255, 69, 0, 1),
+            0 15px 0 2px rgba(255, 140, 0, 1),
+            0 -15px 0 2px rgba(255, 100, 0, 1),
+            /* Diagonal primaries */
+            12px 12px 0 3px rgba(255, 69, 0, 1),
+            -12px 12px 0 3px rgba(255, 120, 0, 1),
+            12px -12px 0 3px rgba(255, 140, 0, 1),
+            -12px -12px 0 3px rgba(255, 100, 0, 1),
+            /* Secondary ring - red/yellow mix */
+            20px 8px 0 1px rgba(220, 20, 60, 1),
+            -20px 8px 0 1px rgba(255, 215, 0, 1),
+            20px -8px 0 1px rgba(255, 69, 0, 1),
+            -20px -8px 0 1px rgba(255, 165, 0, 1),
+            8px 20px 0 2px rgba(255, 140, 0, 1),
+            -8px 20px 0 2px rgba(255, 215, 0, 1),
+            8px -20px 0 2px rgba(220, 20, 60, 1),
+            -8px -20px 0 2px rgba(255, 120, 0, 1);
+        }
+        25% {
+          opacity: 1;
+          transform: scale(1.2) rotate(45deg);
+          box-shadow:
+            0 0 40px 15px rgba(255, 200, 0, 0.8),
+            /* Particles spreading chaotically */
+            45px 15px 0 4px rgba(255, 120, 0, 0.9),
+            -55px 10px 0 5px rgba(255, 69, 0, 0.9),
+            20px 50px 0 3px rgba(255, 140, 0, 0.9),
+            -30px -45px 0 6px rgba(255, 100, 0, 0.9),
+            60px -20px 0 4px rgba(255, 69, 0, 0.9),
+            -40px 55px 0 5px rgba(255, 120, 0, 0.9),
+            50px 40px 0 3px rgba(255, 140, 0, 0.9),
+            -50px -30px 0 4px rgba(255, 100, 0, 0.9),
+            /* Chaotic secondary particles */
+            70px 5px 0 2px rgba(220, 20, 60, 0.8),
+            -65px 25px 0 3px rgba(255, 215, 0, 0.8),
+            35px -60px 0 2px rgba(255, 69, 0, 0.8),
+            -45px -55px 0 3px rgba(255, 165, 0, 0.8),
+            25px 65px 0 2px rgba(255, 140, 0, 0.8),
+            -60px 40px 0 2px rgba(255, 215, 0, 0.8),
+            55px -50px 0 3px rgba(220, 20, 60, 0.8),
+            -35px -70px 0 2px rgba(255, 120, 0, 0.8),
+            /* Small white-hot sparks */
+            80px 30px 0 1px rgba(255, 255, 255, 0.9),
+            -75px -20px 0 1px rgba(255, 255, 255, 0.9),
+            40px 75px 0 1px rgba(255, 255, 255, 0.9),
+            -70px 50px 0 1px rgba(255, 255, 255, 0.9);
+        }
+        60% {
+          opacity: 0.7;
+          transform: scale(1.8) rotate(120deg);
+          box-shadow:
+            0 0 60px 20px rgba(255, 100, 0, 0.3),
+            /* Particles at max distance - chaotic spread */
+            120px 45px 0 6px rgba(255, 120, 0, 0.5),
+            -140px 30px 0 7px rgba(255, 69, 0, 0.5),
+            60px 130px 0 5px rgba(255, 140, 0, 0.5),
+            -80px -120px 0 8px rgba(255, 100, 0, 0.5),
+            150px -60px 0 6px rgba(255, 69, 0, 0.5),
+            -110px 140px 0 7px rgba(255, 120, 0, 0.5),
+            130px 100px 0 5px rgba(255, 140, 0, 0.5),
+            -125px -90px 0 6px rgba(255, 100, 0, 0.5),
+            /* Outer chaos particles */
+            160px 20px 0 3px rgba(220, 20, 60, 0.4),
+            -155px 70px 0 4px rgba(255, 215, 0, 0.4),
+            90px -150px 0 3px rgba(255, 69, 0, 0.4),
+            -120px -140px 0 4px rgba(255, 165, 0, 0.4),
+            75px 155px 0 3px rgba(255, 140, 0, 0.4),
+            -145px 110px 0 3px rgba(255, 215, 0, 0.4),
+            140px -130px 0 4px rgba(220, 20, 60, 0.4),
+            -100px -160px 0 3px rgba(255, 120, 0, 0.4),
+            /* Trailing sparks */
+            180px 80px 0 2px rgba(255, 255, 255, 0.3),
+            -170px -60px 0 2px rgba(255, 255, 255, 0.3),
+            110px 175px 0 2px rgba(255, 255, 255, 0.3),
+            -165px 120px 0 2px rgba(255, 255, 255, 0.3),
+            /* Extra erratic particles */
+            95px -85px 0 4px rgba(255, 100, 0, 0.4),
+            -105px 95px 0 5px rgba(255, 140, 0, 0.4),
+            85px 105px 0 4px rgba(255, 69, 0, 0.4),
+            -95px -105px 0 5px rgba(255, 120, 0, 0.4);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(2.5) rotate(180deg);
+          box-shadow:
+            0 0 80px 30px rgba(255, 120, 0, 0),
+            200px 80px 0 10px rgba(255, 120, 0, 0),
+            -220px 60px 0 12px rgba(255, 69, 0, 0),
+            120px 210px 0 8px rgba(255, 140, 0, 0),
+            -150px -200px 0 14px rgba(255, 100, 0, 0),
+            240px -110px 0 10px rgba(255, 69, 0, 0),
+            -180px 230px 0 12px rgba(255, 120, 0, 0),
+            210px 170px 0 8px rgba(255, 140, 0, 0),
+            -200px -160px 0 10px rgba(255, 100, 0, 0),
+            260px 40px 0 6px rgba(220, 20, 60, 0),
+            -250px 130px 0 8px rgba(255, 215, 0, 0),
+            160px -240px 0 6px rgba(255, 69, 0, 0),
+            -190px -230px 0 8px rgba(255, 165, 0, 0),
+            140px 250px 0 6px rgba(255, 140, 0, 0),
+            -235px 180px 0 6px rgba(255, 215, 0, 0),
+            230px -210px 0 8px rgba(220, 20, 60, 0),
+            -170px -260px 0 6px rgba(255, 120, 0, 0),
+            280px 150px 0 4px rgba(255, 255, 255, 0),
+            -270px -120px 0 4px rgba(255, 255, 255, 0),
+            190px 270px 0 4px rgba(255, 255, 255, 0),
+            -260px 200px 0 4px rgba(255, 255, 255, 0),
+            170px -160px 0 8px rgba(255, 100, 0, 0),
+            -180px 170px 0 10px rgba(255, 140, 0, 0),
+            160px 180px 0 8px rgba(255, 69, 0, 0),
+            -170px -180px 0 10px rgba(255, 120, 0, 0);
+        }
+      }
+
+      /* Secondary explosion wave - offset timing and rotation */
+      @keyframes explodeSecondary {
+        0% {
+          opacity: 1;
+          transform: scale(0) rotate(180deg);
+          box-shadow:
+            0 0 15px 8px rgba(255, 215, 0, 1),
+            18px 5px 0 2px rgba(255, 165, 0, 1),
+            -12px 10px 0 2px rgba(220, 20, 60, 1),
+            10px -18px 0 2px rgba(255, 140, 0, 1),
+            -18px -10px 0 2px rgba(255, 100, 0, 1),
+            22px 18px 0 1px rgba(255, 69, 0, 1),
+            -22px 14px 0 1px rgba(255, 120, 0, 1);
+        }
+        30% {
+          opacity: 1;
+          transform: scale(1.5) rotate(240deg);
+          box-shadow:
+            0 0 50px 18px rgba(255, 200, 0, 0.7),
+            65px -25px 0 5px rgba(255, 165, 0, 0.8),
+            -48px 60px 0 6px rgba(220, 20, 60, 0.8),
+            55px -70px 0 4px rgba(255, 140, 0, 0.8),
+            -70px -50px 0 5px rgba(255, 100, 0, 0.8),
+            75px 55px 0 3px rgba(255, 69, 0, 0.8),
+            -65px 48px 0 4px rgba(255, 120, 0, 0.8),
+            40px 80px 0 3px rgba(255, 215, 0, 0.8),
+            -80px -40px 0 3px rgba(255, 165, 0, 0.8);
+        }
+        70% {
+          opacity: 0.5;
+          transform: scale(2.2) rotate(320deg);
+          box-shadow:
+            0 0 70px 25px rgba(255, 100, 0, 0.2),
+            145px -70px 0 9px rgba(255, 165, 0, 0.3),
+            -120px 135px 0 10px rgba(220, 20, 60, 0.3),
+            130px -155px 0 7px rgba(255, 140, 0, 0.3),
+            -160px -125px 0 8px rgba(255, 100, 0, 0.3),
+            165px 140px 0 6px rgba(255, 69, 0, 0.3),
+            -150px 125px 0 7px rgba(255, 120, 0, 0.3),
+            105px 170px 0 5px rgba(255, 215, 0, 0.3),
+            -175px -110px 0 6px rgba(255, 165, 0, 0.3);
+        }
+        100% {
+          opacity: 0;
+          transform: scale(3) rotate(360deg);
+          box-shadow:
+            0 0 100px 40px rgba(255, 120, 0, 0),
+            235px -140px 0 15px rgba(255, 165, 0, 0),
+            -210px 225px 0 18px rgba(220, 20, 60, 0),
+            220px -250px 0 12px rgba(255, 140, 0, 0),
+            -260px -215px 0 14px rgba(255, 100, 0, 0),
+            270px 240px 0 10px rgba(255, 69, 0, 0),
+            -245px 210px 0 12px rgba(255, 120, 0, 0),
+            195px 265px 0 8px rgba(255, 215, 0, 0),
+            -270px -200px 0 10px rgba(255, 165, 0, 0);
+        }
+      }
+
+      /* First explosion layer - main burst */
+      .explosion.explode::before {
+        animation: explode 1.2s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+      }
+
+      /* Second explosion layer - offset and rotated for chaos */
+      .explosion.explode::after {
+        animation: explodeSecondary 1.2s cubic-bezier(0.19, 1, 0.22, 1) 0.08s forwards;
+        opacity: 0.7;
+      }
+
+      /**
+       * Page Fall Animation - DRAMATIC & FAST
+       * - Rapid downward plunge with gravity acceleration
+       * - Quick fade out (1s) for dramatic disappearance
+       * - Accelerating fall using cubic-bezier for gravity effect
+       * - Content "drops" off screen like a collapsing building
+       */
+      #page-wrapper {
+        transition: transform 1.5s cubic-bezier(0.6, 0.04, 0.98, 0.34),
+                    opacity 1s ease-in;
+      }
+
+      .self-destruct-fall {
+        transform: translateY(120vh) rotate(2deg) !important;
+        opacity: 0 !important;
+      }
+
+      /* Respect user's motion preferences */
+      @media (prefers-reduced-motion: reduce) {
+        .explosion,
+        .explosion::before,
+        .explosion::after {
+          animation: none !important;
+        }
+
+        #page-wrapper {
+          transition: none !important;
+        }
+
+        .self-destruct-fall {
+          transform: none !important;
+          opacity: 1 !important;
+        }
+      }
+
+      /* ===== BULLET THE HORSE EASTER EGG STYLES ===== */
+
+      /**
+       * Hidden trigger - no visual indication
+       * Click-only interaction, completely invisible to users
+       */
+      #osu-easter-egg-trigger {
+        user-select: none;
+      }
+
+      /**
+       * Notification popup
+       * - Appears at top center of viewport
+       * - Orange terminal-style design
+       * - Fades in and out smoothly
+       */
+      .bullet-notification {
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10000;
+        background: #ff7800;
+        color: #000;
+        padding: 12px 24px;
+        border-radius: 4px;
+        font-family: 'JetBrains Mono', monospace;
+        font-size: 14px;
+        font-weight: 600;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(255, 120, 0, 0.4);
+      }
+
+      .bullet-notification.show {
+        opacity: 1;
+      }
+
+      .bullet-notification.fade-out {
+        opacity: 0;
+      }
+
+      /**
+       * Bullet the Horse container
+       * - Fixed positioning for viewport traversal
+       * - Behind content (z-index: 5) but above grid background
+       * - Starts off-screen right, moves to off-screen left
+       * - No pointer events to avoid blocking clicks
+       */
+      .bullet-container {
+        position: fixed;
+        top: 50%;
+        right: -200px;
+        transform: translateY(-50%);
+        z-index: 5;
+        pointer-events: none;
+        will-change: transform;
+      }
+
+      /**
+       * Bullet horse image
+       * - Height sized 2.5x larger than original
+       * - Responsive: 70px (mobile min) to 140px (desktop max)
+       * - Auto width maintains aspect ratio
+       * - Smooth rendering
+       */
+      .bullet-horse {
+        height: clamp(70px, 8.75rem, 140px);
+        width: auto;
+        display: block;
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+
+      /**
+       * Galloping animation
+       * - Horizontal movement: SLOWER - 10s traverse (was 6s)
+       * - Rotation: FASTER gallop - alternates every 6.25% (was 12.5%)
+       * - More frequent rocking for energetic gallop effect
+       */
+      @keyframes gallop {
+        0% {
+          transform: translateX(0) translateY(-50%) rotate(0deg);
+        }
+        6.25% {
+          transform: translateX(calc(-12.5vw)) translateY(-50%) rotate(-4deg);
+        }
+        12.5% {
+          transform: translateX(calc(-25vw)) translateY(-50%) rotate(0deg);
+        }
+        18.75% {
+          transform: translateX(calc(-37.5vw)) translateY(-50%) rotate(4deg);
+        }
+        25% {
+          transform: translateX(calc(-50vw)) translateY(-50%) rotate(0deg);
+        }
+        31.25% {
+          transform: translateX(calc(-62.5vw)) translateY(-50%) rotate(-4deg);
+        }
+        37.5% {
+          transform: translateX(calc(-75vw)) translateY(-50%) rotate(0deg);
+        }
+        43.75% {
+          transform: translateX(calc(-87.5vw)) translateY(-50%) rotate(4deg);
+        }
+        50% {
+          transform: translateX(calc(-100vw)) translateY(-50%) rotate(0deg);
+        }
+        56.25% {
+          transform: translateX(calc(-112.5vw)) translateY(-50%) rotate(-4deg);
+        }
+        62.5% {
+          transform: translateX(calc(-125vw)) translateY(-50%) rotate(0deg);
+        }
+        68.75% {
+          transform: translateX(calc(-137.5vw)) translateY(-50%) rotate(4deg);
+        }
+        75% {
+          transform: translateX(calc(-150vw)) translateY(-50%) rotate(0deg);
+        }
+        81.25% {
+          transform: translateX(calc(-162.5vw)) translateY(-50%) rotate(-4deg);
+        }
+        87.5% {
+          transform: translateX(calc(-175vw)) translateY(-50%) rotate(0deg);
+        }
+        93.75% {
+          transform: translateX(calc(-187.5vw)) translateY(-50%) rotate(4deg);
+        }
+        100% {
+          transform: translateX(calc(-200vw)) translateY(-50%) rotate(0deg);
+        }
+      }
+
+      .bullet-container.galloping {
+        animation: gallop 10s linear forwards;
+      }
+
+      /* Respect reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .bullet-notification,
+        .bullet-container {
+          display: none !important;
+        }
+      }
+
+      /* ===== LOCK EASTER EGG STYLES ===== */
+
+      /**
+       * Lock trigger button
+       * - Hidden by default (opacity 0)
+       * - Appears only on hover
+       * - Positioned in top-right corner
+       * - Larger hit area than visible icon
+       */
+      .lock-trigger {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        padding: 12px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .lock-trigger:hover {
+        opacity: 1;
+      }
+
+      .lock-icon {
+        width: 20px;
+        height: 20px;
+        stroke: #ff7800;
+        stroke-width: 2;
+      }
+
+      /**
+       * Shake animation for password error
+       * - Subtle horizontal shake
+       * - Used when incorrect password entered
+       */
+      @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        25% { transform: translateX(-8px); }
+        75% { transform: translateX(8px); }
+      }
+
+      .shake-error {
+        animation: shake 0.3s ease-in-out;
+        border-color: #ef4444 !important;
+      }
+
+      /* Disable shake animation for reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .shake-error {
+          animation: none;
+          border-color: #ef4444 !important;
+        }
+      }
+
+      /**
+       * Resume Button Bounce Animation
+       * - Applied to text during "compiling..." state
+       * - Subtle vertical bounce (3px)
+       * - Technical, restrained feel
+       */
+      @keyframes resume-compile-bounce {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-3px); }
+      }
+
+      .resume-compiling {
+        animation: resume-compile-bounce 350ms ease-in-out infinite;
+      }
+
+      /* Disable bounce animation for reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .resume-compiling {
+          animation: none;
+        }
+      }
+    </style>
+
+    <script is:inline>
+      /**
+       * Resume Download with Fake Compile Delay
+       * - Intercepts download click
+       * - Shows "compiling..." with bounce animation
+       * - Delays 800ms before triggering download
+       */
+      function initializeResumeDownload() {
+        const btn = document.getElementById('resume-download-btn');
+        const textSpan = document.getElementById('resume-btn-text');
+
+        if (!btn || !textSpan) return;
+
+        btn.addEventListener('click', function(e) {
+          // Prevent default download
+          e.preventDefault();
+
+          // Store original href
+          const resumeUrl = btn.getAttribute('href');
+
+          // Disable button and change text
+          btn.style.pointerEvents = 'none';
+          btn.classList.add('opacity-75');
+          textSpan.textContent = 'compiling...';
+          textSpan.classList.add('resume-compiling');
+
+          // After 800ms delay, trigger download and reset
+          setTimeout(() => {
+            // Trigger actual download
+            const link = document.createElement('a');
+            link.href = resumeUrl;
+            link.download = '';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Reset button state
+            textSpan.classList.remove('resume-compiling');
+            textSpan.textContent = 'Download Resume';
+            btn.classList.remove('opacity-75');
+            btn.style.pointerEvents = '';
+          }, 800);
+        });
+      }
+
+      initializeResumeDownload();
+      document.addEventListener('astro:after-swap', initializeResumeDownload);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "title": "New Product Development Intern",
+    "company": "Springfield Remanufacturing Company (SRC)",
+    "location": "Springfield, Missouri",
+    "period": "Summer 2024",
+    "current": false,
+    "description": "Contributed to new product development initiatives in a fast-paced manufacturing environment, supporting engineering design and prototyping efforts.",
+    "achievements": [
+      "Supported new product development cycles from concept to prototype",
+      "Collaborated with cross-functional teams to solve engineering challenges",
+      "Gained hands-on experience in manufacturing processes and product design"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Mechanical Engineering Intern",
+    "company": "OSU New Product Development Center (NPDC)",
+    "location": "Stillwater, Oklahoma",
+    "period": "Academic Year 2024-2025",
+    "current": true,
+    "description": "Working on product development projects in OSU's research-focused engineering center, applying mechanical engineering principles to real-world design challenges.",
+    "achievements": [
+      "Contributing to innovative product development projects",
+      "Applying CAD and engineering analysis skills to design solutions",
+      "Collaborating with faculty and industry partners on research initiatives"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Engineering Intern",
+    "company": "GE Aerospace",
+    "location": "TBD",
+    "period": "Summer 2026",
+    "current": false,
+    "description": "Accepted internship position with GE Aerospace for Summer 2026. Looking forward to contributing to aerospace engineering projects at a leading industry organization.",
+    "achievements": []
+  },
+  {
+    "id": 4,
+    "title": "Cofounder & Managing Member",
+    "company": "TriPoint Innovations LLC",
+    "location": "Oklahoma",
+    "period": "2023 - Present",
+    "current": true,
+    "description": "Co-founded technology startup focused on developing innovative location tracking solutions for outdoor and tactical applications.",
+    "achievements": [
+      "Led development of Hunter Radar, an AI-integrated, LoRa-based geolocation system for offline and online tracking",
+      "Managed product design, prototyping, and business operations as managing member",
+      "Built technology solutions combining hardware, software, and wireless communication systems"
+    ]
+  }
+]

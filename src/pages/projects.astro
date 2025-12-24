@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import profileData from '../data/profile.json';
+import projectsData from '../data/projects.json';
+---
+
+<Layout
+  title={`Projects - ${profileData.name}`}
+  description="A showcase of my recent projects and work"
+>
+  <section class="py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="mb-12 animate-slide-up">
+        <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          Projects
+        </h1>
+        <p class="text-xl text-gray-600 dark:text-gray-400 max-w-2xl">
+          A collection of projects I've worked on, from personal experiments to professional work.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {projectsData.map((project, index) => (
+          <div
+            class="animate-fade-in"
+            style={`animation-delay: ${index * 0.1}s;`}
+          >
+            <ProjectCard
+              title={project.title}
+              tagline={project.tagline}
+              description={project.description}
+              role={project.role}
+              tech={project.tech}
+              links={project.links}
+              featured={project.featured}
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</Layout>
