@@ -49,6 +49,26 @@ import involvementData from '../data/involvement.json';
         </svg>
       </button>
 
+      <!-- ===== HOTDOG EASTER EGG TRIGGER ===== -->
+      <!-- Hidden hotdog icon in bottom-left, only visible on hover -->
+      <button
+        id="hotdog-trigger"
+        class="hotdog-trigger"
+        aria-label="Hotdog Champion"
+        title="?"
+      >
+        <svg class="hotdog-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+          <!-- Bun (top) -->
+          <ellipse cx="32" cy="24" rx="24" ry="8" fill="#D2691E"/>
+          <!-- Sausage -->
+          <rect x="10" y="26" width="44" height="12" rx="6" fill="#8B4513"/>
+          <!-- Bun (bottom) -->
+          <ellipse cx="32" cy="40" rx="24" ry="8" fill="#D2691E"/>
+          <!-- Mustard zigzag -->
+          <path d="M 15 32 L 18 30 L 21 32 L 24 30 L 27 32 L 30 30 L 33 32 L 36 30 L 39 32 L 42 30 L 45 32 L 48 30 L 51 32" stroke="#FFD700" stroke-width="2" fill="none"/>
+        </svg>
+      </button>
+
     <main id="main-content" class="flex-1 relative z-10">
       <!-- HOME SECTION -->
       <section id="home" class="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 py-20">
@@ -383,6 +403,48 @@ import involvementData from '../data/involvement.json';
           </p>
         </div>
         <!-- ===== EDIT SECRET CONTENT ABOVE ===== -->
+      </div>
+    </div>
+
+    <!-- Hotdog Champion Overlay -->
+    <div id="hotdog-overlay" class="hidden fixed inset-0 z-[160] flex items-center justify-center p-4">
+      <!-- Background overlay -->
+      <div class="absolute inset-0 bg-black/90 backdrop-blur-md" id="hotdog-overlay-backdrop"></div>
+
+      <!-- Confetti container -->
+      <div id="confetti-container" class="absolute inset-0 pointer-events-none overflow-hidden"></div>
+
+      <!-- Hotdog content panel -->
+      <div class="relative bg-black border-2 border-orange-500 rounded p-12 max-w-2xl w-full">
+        <!-- Close button -->
+        <button
+          id="hotdog-close"
+          class="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors text-2xl leading-none"
+          aria-label="Close"
+        >
+          ×
+        </button>
+
+        <!-- Hotdog Champion Content -->
+        <div class="text-center">
+          <h2 class="text-4xl font-bold text-orange-500 mb-6">
+            2021 Bratwurst Eating Contest Champion
+          </h2>
+          <div class="mb-6">
+            <img
+              src="/hotdog.jpg"
+              alt="2021 Erntefest Bratwurst Eating Championship"
+              class="mx-auto rounded-lg border-2 border-orange-500 max-w-full h-auto"
+              style="max-height: 400px;"
+            />
+          </div>
+          <p class="text-xl text-gray-300 font-sans leading-relaxed">
+            Winner of the 2021 Erntefest Bratwurst Eating Championship
+          </p>
+          <p class="text-sm text-gray-500 mt-4 font-mono">
+            // A legacy of competitive excellence
+          </p>
+        </div>
       </div>
     </div>
 
@@ -777,6 +839,91 @@ import involvementData from '../data/involvement.json';
 
       initializeLockEasterEgg();
       document.addEventListener('astro:after-swap', initializeLockEasterEgg);
+    </script>
+
+    <script is:inline>
+      /**
+       * HOTDOG CHAMPION EASTER EGG
+       * - Hidden hotdog icon in bottom-left corner (only visible on hover)
+       * - Click to reveal championship achievement overlay
+       * - Shows hotdog.png image and championship description
+       */
+      function initializeHotdogEasterEgg() {
+        const hotdogTrigger = document.getElementById('hotdog-trigger');
+        const hotdogOverlay = document.getElementById('hotdog-overlay');
+        const hotdogClose = document.getElementById('hotdog-close');
+        const hotdogBackdrop = document.getElementById('hotdog-overlay-backdrop');
+        const confettiContainer = document.getElementById('confetti-container');
+
+        if (!hotdogTrigger || !hotdogOverlay || !hotdogClose || !hotdogBackdrop || !confettiContainer) return;
+
+        function createConfetti() {
+          // Check for reduced motion preference
+          const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          if (prefersReducedMotion) return;
+
+          const colors = ['#f97316', '#fbbf24', '#ef4444', '#fcd34d', '#fb923c'];
+          const confettiCount = 50;
+
+          for (let i = 0; i < confettiCount; i++) {
+            const confetti = document.createElement('div');
+            confetti.className = 'confetti';
+
+            // Random positioning
+            confetti.style.left = Math.random() * 100 + '%';
+            confetti.style.top = '-10px';
+
+            // Random color
+            confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+
+            // Random delay for staggered effect
+            confetti.style.animationDelay = Math.random() * 0.5 + 's';
+
+            // Random size variation
+            const size = Math.random() * 6 + 6; // 6-12px
+            confetti.style.width = size + 'px';
+            confetti.style.height = size + 'px';
+
+            confettiContainer.appendChild(confetti);
+
+            // Remove confetti after animation completes
+            setTimeout(() => {
+              confetti.remove();
+            }, 3500);
+          }
+        }
+
+        function openHotdogOverlay() {
+          hotdogOverlay.classList.remove('hidden');
+          document.body.style.overflow = 'hidden';
+
+          // Trigger confetti
+          createConfetti();
+        }
+
+        function closeHotdogOverlay() {
+          hotdogOverlay.classList.add('hidden');
+          document.body.style.overflow = '';
+
+          // Clear any remaining confetti
+          confettiContainer.innerHTML = '';
+        }
+
+        // Event Listeners
+        hotdogTrigger.addEventListener('click', openHotdogOverlay);
+        hotdogClose.addEventListener('click', closeHotdogOverlay);
+        hotdogBackdrop.addEventListener('click', closeHotdogOverlay);
+
+        // Escape key closes hotdog overlay
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && !hotdogOverlay.classList.contains('hidden')) {
+            closeHotdogOverlay();
+          }
+        });
+      }
+
+      initializeHotdogEasterEgg();
+      document.addEventListener('astro:after-swap', initializeHotdogEasterEgg);
     </script>
 
     <style is:global>
@@ -1365,6 +1512,69 @@ import involvementData from '../data/involvement.json';
         height: 20px;
         stroke: #ff7800;
         stroke-width: 2;
+      }
+
+      /**
+       * Hotdog trigger button
+       * - Hidden by default (opacity 0)
+       * - Appears only on hover
+       * - Positioned in bottom-left corner (unexpected location)
+       * - Larger hit area than visible icon
+       */
+      .hotdog-trigger {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        z-index: 100;
+        padding: 12px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .hotdog-trigger:hover {
+        opacity: 1;
+      }
+
+      .hotdog-icon {
+        width: 20px;
+        height: 20px;
+        color: #ff7800;
+      }
+
+      /**
+       * Confetti animation for hotdog champion popup
+       * - Individual confetti pieces fall from top
+       * - Random colors (orange, yellow, red, gold)
+       * - Slight rotation during fall
+       */
+      .confetti {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        opacity: 0.9;
+        animation: confetti-fall 3s linear forwards;
+      }
+
+      @keyframes confetti-fall {
+        0% {
+          transform: translateY(-10px) rotate(0deg);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+
+      /* Disable confetti animation for reduced motion preference */
+      @media (prefers-reduced-motion: reduce) {
+        .confetti {
+          animation: none;
+          display: none;
+        }
       }
 
       /**
