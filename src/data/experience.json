@@ -1,33 +1,5 @@
 [
   {
-    "id": 1,
-    "title": "New Product Development Intern",
-    "company": "Springfield Remanufacturing Company (SRC)",
-    "location": "Springfield, Missouri",
-    "period": "Summer 2024",
-    "current": false,
-    "description": "Contributed to new product development initiatives in a fast-paced manufacturing environment, supporting engineering design and prototyping efforts.",
-    "achievements": [
-      "Supported new product development cycles from concept to prototype",
-      "Collaborated with cross-functional teams to solve engineering challenges",
-      "Gained hands-on experience in manufacturing processes and product design"
-    ]
-  },
-  {
-    "id": 2,
-    "title": "Mechanical Engineering Intern",
-    "company": "OSU New Product Development Center (NPDC)",
-    "location": "Stillwater, Oklahoma",
-    "period": "Academic Year 2024-2025",
-    "current": true,
-    "description": "Working on product development projects in OSU's research-focused engineering center, applying mechanical engineering principles to real-world design challenges.",
-    "achievements": [
-      "Contributing to innovative product development projects",
-      "Applying CAD and engineering analysis skills to design solutions",
-      "Collaborating with faculty and industry partners on research initiatives"
-    ]
-  },
-  {
     "id": 3,
     "title": "Engineering Intern",
     "company": "GE Aerospace",
@@ -38,17 +10,45 @@
     "achievements": []
   },
   {
+    "id": 2,
+    "title": "Mechanical Engineering Intern",
+    "company": "OSU New Product Development Center (NPDC)",
+    "location": "Stillwater, Oklahoma",
+    "period": "Academic Year 2024 to 2026",
+    "current": true,
+    "description": "Mechanical engineering project work through OSU's New Product Development Center. Supporting 8+ client projects across product design, casting, prototyping, testing, modeling, and engineering analysis.",
+    "achievements": [
+      "Created SolidWorks models, technical drawings, design documentation, and product renderings",
+      "Worked through real world development challenges including manufacturability, material selection, and prototype refinement",
+      "Supported testing, prototyping, modeling, casting, and engineering analysis for client based product development"
+    ]
+  },
+  {
     "id": 4,
     "title": "Cofounder & Managing Member",
     "company": "TriPoint Innovations LLC",
     "location": "Oklahoma",
-    "period": "2023 - Present",
+    "period": "2025 to Present",
     "current": true,
-    "description": "Co-founded technology startup focused on developing innovative location tracking solutions for outdoor and tactical applications.",
+    "description": "Co-founded technology startup focused on developing Hunter Radar, an AI integrated LoRa based geolocation system for offline and online tracking in remote environments.",
     "achievements": [
-      "Led development of Hunter Radar, an AI-integrated, LoRa-based geolocation system for offline and online tracking",
-      "Managed product design, prototyping, and business operations as managing member",
-      "Built technology solutions combining hardware, software, and wireless communication systems"
+      "Developed Hunter Radar through the Riata Startup Experience at Oklahoma State University",
+      "Led product design, prototyping, customer discovery, and business operations as managing member",
+      "Built technology solutions combining hardware, software, wireless communication, and outdoor safety applications"
+    ]
+  },
+  {
+    "id": 1,
+    "title": "New Product Development Intern",
+    "company": "Springfield Remanufacturing Company (SRC)",
+    "location": "Springfield, Missouri",
+    "period": "Summer 2025",
+    "current": false,
+    "description": "Contributed to new product development initiatives in a fast paced manufacturing environment, supporting engineering design and prototyping efforts.",
+    "achievements": [
+      "Supported new product development cycles from concept to prototype",
+      "Collaborated with cross functional teams to solve engineering challenges",
+      "Gained hands on experience in manufacturing processes and product design"
     ]
   }
 ]
