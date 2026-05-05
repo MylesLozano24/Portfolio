@@ -52,7 +52,7 @@
         "src": "/6.73.jpg",
         "title": "6.7L Cummins - Additional Projects",
         "description": "Pictured is a GM 2.8L MiniMax engine, one of 6+ engines I disassembled, inspected, and assessed for remanufacturing before sending to production."
-      },
+      }
     ],
     "links": {},
     "featured": true
@@ -61,7 +61,7 @@
     "id": 3,
     "title": "NPDC Product Development Work",
     "tagline": "Product development at OSU",
-    "description": "Mechanical engineering projects at OSU's New Product Development Center\nWorked with LateraLift LLC, a new shoelace holder develpoment, and Hopkins Manufacturing Corporation\nApplied CAD and SolidWorks for design documentation\nPrototyping and engineering analysis for real-world challenges",
+    "description": "Mechanical engineering projects at OSU's New Product Development Center\nWorked with LateraLift LLC, a new shoelace holder development, and Hopkins Manufacturing Corporation\nApplied CAD and SolidWorks for design documentation\nPrototyping and engineering analysis for real-world challenges",
     "role": "Mechanical Engineering Intern",
     "date": "Fall 2025",
     "tech": ["CAD", "SolidWorks", "Prototyping", "Engineering Analysis"],
