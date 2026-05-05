@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Hunter Radar",
     "tagline": "AI-integrated geolocation for hunters",
-    "description": "Flagship product of TriPoint Innovations LLC\nLoRa wireless technology for offline/online geolocation\nAI-integrated tracking for areas without cellular coverage\nDesigned for hunters and outdoor enthusiasts",
+    "description": "Developed through the Riata Startup Experience at Oklahoma State University\nLoRa wireless technology for offline and online geolocation\nAI integrated tracking for areas without cellular coverage\nBusiness model focused on outdoor safety, group coordination, and remote communication\nDesigned for hunters, landowners, and outdoor enthusiasts",
     "role": "Cofounder & Lead Developer",
     "date": "Fall 2025",
     "tech": ["LoRa", "AI/ML", "Embedded Systems", "IoT", "Wireless Communication"],
