@@ -31,9 +31,9 @@
     "id": 3,
     "title": "Engineering Intern",
     "company": "GE Aerospace",
-    "location": "TBD",
+    "location": "Strother Air Field, KS",
     "period": "Summer 2026",
-    "current": false,
+    "current": true,
     "description": "Accepted internship position with GE Aerospace for Summer 2026. Looking forward to contributing to aerospace engineering projects at a leading industry organization.",
     "achievements": []
   },
