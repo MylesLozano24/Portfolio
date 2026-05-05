@@ -18,6 +18,11 @@
         "title": "Hunter Radar - Tracking Interface",
         "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
       }
+      {
+        "src": "/HunterRadar3.jpg",
+        "title": "Hunter Radar - Tracking Interface",
+        "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
+      }
     ],
     "links": {
       "github": ""
@@ -58,13 +63,18 @@
     "images": [
       {
         "src": "/NPDC1.jpg",
-        "title": "NPDC - CAD Design Work",
+        "title": "NPDC - Patent Drawings",
         "description": "CAD and SolidWorks design documentation for product development projects at OSU's New Product Development Center."
       },
       {
         "src": "/NPDC2.jpg",
-        "title": "NPDC - Prototyping & Analysis",
-        "description": "Prototyping and engineering analysis work for LateraLift LLC and Hopkins Manufacturing Corporation."
+        "title": "NPDC - CAD Modeling",
+        "description": "Prototyping and engineering analysis work for a customer."
+      }
+      {
+        "src": "/NPDC3.jpg",
+        "title": "NPDC - Patent Drawings",
+        "description": "Prototyping and engineering analysis work for a customer."
       }
     ],
     "links": {},
