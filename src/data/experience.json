@@ -6,7 +6,7 @@
     "location": "Strother Field, KS",
     "period": "May 2026 - August 2026",
     "current": true,
-    "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs.",
+    "description": "Supported turbine hardware processing, quality improvement, root-cause analysis, and production readiness for military and commercial propulsion programs.",
     "achievements": [
       "Designed VGT inspection tooling to improve dimensional verification for tight aerospace tolerances.",
       "Led Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance.",
@@ -18,43 +18,68 @@
   {
     "id": 2,
     "title": "Mechanical Engineering Intern",
-    "company": "OSU New Product Development Laboratory Center (NPDC)",
+    "company": "OSU New Product Development Laboratory",
     "location": "Stillwater, Oklahoma",
-    "period": "Academic Year 2024 to 2026",
+    "period": "August 2025 - Present",
     "current": true,
-    "description": "Mechanical engineering project work through OSU's New Product Development Center. Supporting 8+ client projects across product design, casting, prototyping, testing, modeling, and engineering analysis.",
+    "description": "Mechanical engineering project work through OSU's New Product Development Laboratory, supporting client-driven hardware projects across product design, prototyping, testing, modeling, manufacturability, casting, and engineering analysis.",
     "achievements": [
-      "Created SolidWorks models, technical drawings, design documentation, and product renderings.",
-      "Worked through real world development challenges including manufacturability, material selection, and prototype refinement.",
-      "Supported testing, prototyping, modeling, casting, and engineering analysis for client based product development."
+      "Created SolidWorks models, technical drawings, design documentation, CAD models, and product renderings.",
+      "Developed prototypes and manufacturability improvements for client hardware projects.",
+      "Supported lateral lift oil recovery development using bladder-driven pumping and proprietary valve architecture.",
+      "Supported Oil States automation development involving actuator-driven cap installation, mechanical tooling, and production equipment validation.",
+      "Supported confidential defense and aerospace work using CAD modeling, CFD analysis, and manufacturability review.",
+      "Worked through real world development challenges including material selection, prototype refinement, testing, casting, and engineering analysis."
     ]
   },
   {
     "id": 4,
-    "title": "Cofounder & Managing Member",
+    "title": "Co-Founder & Product Lead",
     "company": "TriPoint Innovations LLC",
-    "location": "Oklahoma",
-    "period": "2025 to Present",
+    "location": "Stillwater, Oklahoma",
+    "period": "April 2025 - Present",
     "current": true,
-    "description": "Co-founded technology startup focused on developing Hunter Radar, an AI integrated LoRa based geolocation system for offline and online tracking in remote environments.",
+    "description": "Co-founded early-stage technology company developing Hunter Radar, an AI-integrated LoRa-based geolocation system for outdoor safety, offline communication, and remote group tracking.",
     "achievements": [
-      "Developed Hunter Radar through the Riata Startup Experience at Oklahoma State University.",
-      "Led product design, prototyping, customer discovery, and business operations as managing member.",
-      "Built technology solutions combining hardware, software, wireless communication, and outdoor safety applications."
+      "Led Hunter Radar system design integrating ESP32, Python, LoRa, GPS, BLE, and microcontroller hardware for offline field communication.",
+      "Developed product requirements for group tracking, boundary alerts, SOS signaling, waypoint navigation, and low-connectivity use.",
+      "Led business development efforts including customer discovery, market research, product positioning, competitive analysis, and partner outreach.",
+      "Created investor, partner, and grant materials including pitch decks, one-page overviews, funding asks, budget planning, and equipment justification.",
+      "Supported manufacturing strategy, intellectual property preparation, NDA development, financial planning, and commercialization planning.",
+      "Participated in entrepreneurship and accelerator programs through the Oklahoma Farm Bureau Business Accelerator, OSU Riata Center, and CEAT Innovation Center."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Engineering Director",
+    "company": "Large-Scale Mechanical Display Project",
+    "location": "Stillwater, Oklahoma",
+    "period": "Fall 2024 - Fall 2026",
+    "current": true,
+    "description": "Lead design, fabrication, controls integration, and safety planning for a large-scale mechanical display involving structural assemblies, motion systems, and synchronized electromechanical movement.",
+    "achievements": [
+      "Lead design and fabrication of a large-scale mechanical display with structural assemblies and motion systems.",
+      "Develop CAD models, motion studies, and FEA stress analysis to evaluate component layout, linkage behavior, loading conditions, and assembly feasibility.",
+      "Integrate motors, actuators, relay logic, timing controls, and electrical enclosure wiring to automate synchronized mechanical movement.",
+      "Coordinate welding, lift operation, installation, testing, and safety planning from concept through final assembly."
     ]
   },
   {
     "id": 1,
-    "title": "New Product Development Intern",
-    "company": "Springfield Remanufacturing Company (SRC)",
+    "title": "Product Engineering Intern",
+    "company": "Springfield Remanufacturing Corp. (SRC)",
     "location": "Springfield, Missouri",
-    "period": "Summer 2025",
+    "period": "May 2025 - August 2025",
     "current": false,
-    "description": "Contributed to new product development initiatives in a fast paced manufacturing environment, supporting engineering design and prototyping efforts.",
+    "description": "Contributed to product engineering and new product development initiatives in a fast-paced manufacturing environment, supporting teardown, testing, validation, design review, and production decision-making.",
     "achievements": [
+      "Led teardown and inspection of one 6.7L Cummins engine and four additional engines for remanufacturing feasibility.",
+      "Conducted 40 hours of engine testing to compare aftermarket components against OEM standards.",
+      "Documented test results, failure modes, and recommendations to support engineering and production decisions.",
+      "Validated aftermarket components with potential to reduce per-unit costs by approximately 30%.",
       "Supported new product development cycles from concept to prototype.",
-      "Collaborated with cross functional teams to solve engineering challenges.",
-      "Gained hands on experience in manufacturing processes and product design."
+      "Collaborated with cross-functional teams to solve engineering challenges.",
+      "Gained hands-on experience in manufacturing processes, product design, and cost reduction."
     ]
   }
 ]
