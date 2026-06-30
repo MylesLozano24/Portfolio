@@ -23,6 +23,21 @@
         "title": "Hunter Radar - Tracking Interface",
         "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
       }
+      {
+        "src": "/HunterRadar4.jpg",
+        "title": "Hunter Radar - Field Prototype",
+        "description": "Hunter Radar prototype hardware during development and field testing."
+      },
+      {
+        "src": "/HunterRadar5.jpg",
+        "title": "Hunter Radar - Hardware Development",
+        "description": "Hardware development work for the LoRa-based tracking and communication system."
+      },
+      {
+        "src": "/HunterRadar6.jpg",
+        "title": "Hunter Radar - System Testing",
+        "description": "System testing for offline tracking, group coordination, and remote communication features."
+      }
     ],
     "links": {
       "github": ""
