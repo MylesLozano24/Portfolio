@@ -46,7 +46,7 @@
     "featured": true
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "6.7L Cummins Cost Reduction Engineering",
     "tagline": "Manufacturing cost optimization",
     "description": "Led cost savings initiative for 6.7L Cummins remanufacturing\nAnalyzed manufacturing processes and identified efficiency improvements\nImplemented design changes to reduce production costs\nMaintained quality standards throughout optimization",
@@ -74,7 +74,7 @@
     "featured": true
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "NPDC Product Development Work",
     "tagline": "Product development at OSU",
     "description": "Mechanical engineering projects at OSU's New Product Development Center\nWorked with LateraLift LLC, One Pass, Hopkins Manufacturing Corporation, shoelace hardware development, and other client-driven product concepts\nApplied CAD, SolidWorks, CFD, patent drawing support, and engineering documentation for design development\nSupported prototyping, product refinement, and engineering analysis for real-world mechanical and manufacturing challenges",
@@ -114,7 +114,7 @@
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "OSU Homecoming Engineering Build",
     "tagline": "Integrated electromechanical system",
     "description": "Built integrated system with electrical control hardware and proximity sensors\nDeveloped control logic for state detection and event sequencing\nModeled moving mechanical components for feasibility\nIterated through hardware-software integration and debugging",
@@ -153,7 +153,7 @@
     "featured": true
   },
   {
-    "id": 5,
+    "id": 3,
     "title": "GE Aerospace Turbine Manufacturing Engineering",
     "tagline": "Turbine hardware processing and quality improvement",
     "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs\nDesigned VGT inspection tooling for dimensional verification of tight aerospace tolerances\nLed Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance\nSupported root-cause analysis and process improvements for flight-critical turbine hardware",
