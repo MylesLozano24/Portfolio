@@ -113,17 +113,4 @@
     "links": {},
     "featured": true
   },
-  {
-    "id": 5,
-    "title": "Your New Project",
-    "tagline": "Short description",
-    "description": "Longer description of what you built and why",
-    "role": "Your Role",
-    "tech": ["Technology 1", "Technology 2", "Technology 3"],
-    "links": {
-      "github": "https://github.com/...",
-      "live": "https://..."
-    },
-    "featured": true
-  }
 ]
