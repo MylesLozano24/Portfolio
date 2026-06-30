@@ -83,7 +83,7 @@
       }
     ],
     "links": {
-    "live": "https://news.okstate.edu/articles/engineering-architecture-technology/2025/new_product_development_center_turning_ideas_into_real_world_impact"
+      "live": "https://news.okstate.edu/articles/engineering-architecture-technology/2025/new_product_development_center_turning_ideas_into_real_world_impact"
     },
     "featured": true
   },
@@ -114,5 +114,5 @@
     ],
     "links": {},
     "featured": true
-  },
+  }
 ]
