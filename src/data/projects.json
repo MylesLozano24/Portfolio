@@ -40,7 +40,7 @@
       }
     ],
     "links": {
-      "github": ""
+      "github": "",
       "pitchDeck": "/HunterRadarPitchDeck.pdf"
     },
     "featured": true
@@ -92,12 +92,12 @@
         "title": "NPDC - CAD Modeling",
         "description": "Prototyping and engineering analysis work for a customer."
       },
-       {
+      {
         "src": "/NPDC3.jpg",
         "title": "NPDC - CAD Modeling",
         "description": "Prototyping and engineering analysis work for a customer."
       },
-       {
+      {
         "src": "/NPDC4.jpg",
         "title": "NPDC - CAD Modeling",
         "description": "Prototyping and engineering analysis work for a customer."
