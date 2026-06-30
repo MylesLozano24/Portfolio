@@ -1,13 +1,19 @@
 [
   {
     "id": 3,
-    "title": "Engineering Intern",
+    "title": "Engine Manufacturing Engineering Intern",
     "company": "GE Aerospace",
-    "location": "Strother Air Field, KS",
-    "period": "Summer 2026",
+    "location": "Strother Field, KS",
+    "period": "May 2026 - August 2026",
     "current": true,
-    "description": "Accepted internship position with GE Aerospace for Summer 2026. Looking forward to contributing to aerospace engineering projects at a leading industry organization.",
-    "achievements": []
+    "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs.",
+    "achievements": [
+      "Designed VGT inspection tooling to improve dimensional verification for tight aerospace tolerances.",
+      "Led Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance.",
+      "Supported root-cause analysis and process improvements for flight-critical turbine hardware.",
+      "Developed handling procedures to reduce damage risk for U.S. Coast Guard propulsion hardware.",
+      "Collaborated with manufacturing, quality, supply chain, and operations teams to support validation and production readiness."
+    ]
   },
   {
     "id": 2,
