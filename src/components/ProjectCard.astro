@@ -6,7 +6,15 @@ export interface Props {
   role: string;
   date: string;
   tech: string[];
-  images?: Array<string | { src: string; title: string; description: string }>;
+  images?: Array<
+    | string
+    | {
+        src: string;
+        title: string;
+        description: string;
+        type?: "image" | "video";
+      }
+  >;
   links: {
     live?: string;
     github?: string;
@@ -85,9 +93,21 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
         {images.map((image, index) => {
           const imageSrc = typeof image === 'string' ? image : image.src;
           const imageTitle = typeof image === 'string' ? title : image.title;
-          const imageDescription = typeof image === 'string' ? description.split('\n').join(' • ') : image.description;
+          const imageDescription =
+            typeof image === 'string'
+              ? description.split('\n').join(' • ')
+              : image.description;
+          const isVideo = typeof image !== 'string' && image.type === 'video';
 
-          return (
+          return isVideo ? (
+            <video
+              src={imageSrc}
+              controls
+              preload="metadata"
+              class="h-32 w-auto rounded border border-gray-700 object-cover"
+              title={imageTitle}
+            />
+          ) : (
             <img
               src={imageSrc}
               alt={`${title} screenshot`}
@@ -130,7 +150,6 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     }
   }
 
-  // Close modal on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeImageModal();
