@@ -46,34 +46,6 @@
     "featured": true
   },
   {
-    "id": 4,
-    "title": "6.7L Cummins Cost Reduction Engineering",
-    "tagline": "Manufacturing cost optimization",
-    "description": "Led cost savings initiative for 6.7L Cummins remanufacturing\nAnalyzed manufacturing processes and identified efficiency improvements\nImplemented design changes to reduce production costs\nMaintained quality standards throughout optimization",
-    "role": "New Product Development Intern",
-    "date": "Summer 2025",
-    "tech": ["Process Engineering", "Cost Analysis", "Manufacturing", "CAD", "Quality Control"],
-    "images": [
-      {
-        "src": "/6.71.jpg",
-        "title": "6.7L Cummins - Aftermarket Assembly",
-        "description": "6.7L Cummins assembly with aftermarket components validated through 40 hour dynamometer testing to verify durability, performance, and system integrity"
-      },
-      {
-        "src": "/6.72.jpg",
-        "title": "6.7L Cummins - Aftermarket Part Validation",
-        "description": "Disassembled the engine and performed detailed measurements on each component to evaluate multiple aftermarket part combinations per cylinder following the dynamometer test"
-      },
-      {
-        "src": "/6.73.jpg",
-        "title": "6.7L Cummins - Additional Projects",
-        "description": "Pictured is a GM 2.8L MiniMax engine, one of 6+ engines I disassembled, inspected, and assessed for remanufacturing before sending to production."
-      }
-    ],
-    "links": {},
-    "featured": true
-  },
-  {
     "id": 2,
     "title": "NPDC Product Development Work",
     "tagline": "Product development at OSU",
@@ -114,6 +86,62 @@
     "featured": true
   },
   {
+    "id": 3,
+    "title": "GE Aerospace Turbine Manufacturing Engineering",
+    "tagline": "Turbine hardware processing and quality improvement",
+    "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs\nDesigned VGT inspection tooling for dimensional verification of tight aerospace tolerances\nLed Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance\nSupported root-cause analysis and process improvements for flight-critical turbine hardware",
+    "role": "Engine Manufacturing Engineering Intern",
+    "date": "Summer 2026",
+    "tech": ["Manufacturing Engineering", "Turbine Hardware", "Quality Improvement", "Root Cause Analysis", "Inspection Tooling"],
+    "images": [
+      {
+        "src": "/ge1.jpg",
+        "title": "GE Aerospace - Turbine Hardware",
+        "description": "Turbine hardware processing and manufacturing engineering work."
+      },
+      {
+        "src": "/ge2.jpg",
+        "title": "GE Aerospace - Inspection Tooling",
+        "description": "Inspection tooling and dimensional verification work for aerospace tolerances."
+      },
+      {
+        "src": "/ge3.jpg",
+        "title": "GE Aerospace - Manufacturing Support",
+        "description": "Manufacturing, quality, and process improvement support for propulsion hardware."
+      }
+    ],
+    "links": {},
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "6.7L Cummins Cost Reduction Engineering",
+    "tagline": "Manufacturing cost optimization",
+    "description": "Led cost savings initiative for 6.7L Cummins remanufacturing\nAnalyzed manufacturing processes and identified efficiency improvements\nImplemented design changes to reduce production costs\nMaintained quality standards throughout optimization",
+    "role": "New Product Development Intern",
+    "date": "Summer 2025",
+    "tech": ["Process Engineering", "Cost Analysis", "Manufacturing", "CAD", "Quality Control"],
+    "images": [
+      {
+        "src": "/6.71.jpg",
+        "title": "6.7L Cummins - Aftermarket Assembly",
+        "description": "6.7L Cummins assembly with aftermarket components validated through 40 hour dynamometer testing to verify durability, performance, and system integrity"
+      },
+      {
+        "src": "/6.72.jpg",
+        "title": "6.7L Cummins - Aftermarket Part Validation",
+        "description": "Disassembled the engine and performed detailed measurements on each component to evaluate multiple aftermarket part combinations per cylinder following the dynamometer test"
+      },
+      {
+        "src": "/6.73.jpg",
+        "title": "6.7L Cummins - Additional Projects",
+        "description": "Pictured is a GM 2.8L MiniMax engine, one of 6+ engines I disassembled, inspected, and assessed for remanufacturing before sending to production."
+      }
+    ],
+    "links": {},
+    "featured": true
+  },
+  {
     "id": 5,
     "title": "OSU Homecoming Engineering Build",
     "tagline": "Integrated electromechanical system",
@@ -147,34 +175,6 @@
         "title": "OSU Homecoming - Motion System Video",
         "description": "Video showing the synchronized electromechanical motion system in operation.",
         "type": "video"
-      }
-    ],
-    "links": {},
-    "featured": true
-  },
-  {
-    "id": 3,
-    "title": "GE Aerospace Turbine Manufacturing Engineering",
-    "tagline": "Turbine hardware processing and quality improvement",
-    "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs\nDesigned VGT inspection tooling for dimensional verification of tight aerospace tolerances\nLed Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance\nSupported root-cause analysis and process improvements for flight-critical turbine hardware",
-    "role": "Engine Manufacturing Engineering Intern",
-    "date": "Summer 2026",
-    "tech": ["Manufacturing Engineering", "Turbine Hardware", "Quality Improvement", "Root Cause Analysis", "Inspection Tooling"],
-    "images": [
-      {
-        "src": "/ge1.jpg",
-        "title": "GE Aerospace - Turbine Hardware",
-        "description": "Turbine hardware processing and manufacturing engineering work."
-      },
-      {
-        "src": "/ge2.jpg",
-        "title": "GE Aerospace - Inspection Tooling",
-        "description": "Inspection tooling and dimensional verification work for aerospace tolerances."
-      },
-      {
-        "src": "/ge3.jpg",
-        "title": "GE Aerospace - Manufacturing Support",
-        "description": "Manufacturing, quality, and process improvement support for propulsion hardware."
       }
     ],
     "links": {},
