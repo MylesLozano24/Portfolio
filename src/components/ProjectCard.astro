@@ -18,6 +18,7 @@ export interface Props {
   links: {
     live?: string;
     github?: string;
+    pitchDeck?: string;
   };
   featured?: boolean;
 }
@@ -62,8 +63,8 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     </div>
   </div>
 
-  {(links.live || links.github) && (
-    <div class="flex gap-4 pt-4 border-t border-gray-700 text-xs mb-4">
+  {(links.live || links.github || links.pitchDeck) && (
+    <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-700 text-xs mb-4">
       {links.live && (
         <a
           href={links.live}
@@ -84,6 +85,30 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           → Code
         </a>
       )}
+      {links.pitchDeck && (
+        <a
+          href={links.pitchDeck}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
+        >
+          → View Pitch Deck
+        </a>
+      )}
+    </div>
+  )}
+
+  {links.pitchDeck && (
+    <div class="pt-4 border-t border-gray-700 mb-4">
+      <p class="text-xs text-gray-500 mb-2">
+        // Pitch Deck
+      </p>
+      <iframe
+        src={links.pitchDeck}
+        title={`${title} pitch deck`}
+        class="w-full h-96 rounded border border-gray-700 bg-white"
+        loading="lazy"
+      ></iframe>
     </div>
   )}
 
