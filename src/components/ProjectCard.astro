@@ -36,6 +36,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
         {date}
       </span>
     </div>
+
     <p class="text-sm text-gray-400 mb-3 font-sans">
       {tagline}
     </p>
@@ -43,7 +44,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     <ul class="space-y-1.5 text-gray-300 text-sm font-sans mb-4">
       {description.split('\n').map((point) => (
         <li class="flex items-start">
-          <span class="text-orange-500 mr-2 mt-0.5">→</span>
+          <span class="text-orange-500 mr-2 mt-0.5">-&gt;</span>
           <span>{point}</span>
         </li>
       ))}
@@ -54,6 +55,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     <p class="text-xs text-gray-500 mb-2">
       // {role}
     </p>
+
     <div class="flex flex-wrap gap-2 text-xs">
       {tech.map((item) => (
         <span class="text-gray-300">
@@ -72,9 +74,10 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           rel="noopener noreferrer"
           class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
         >
-          → Read about it here
+          -&gt; Read about it here
         </a>
       )}
+
       {links.github && (
         <a
           href={links.github}
@@ -82,9 +85,10 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           rel="noopener noreferrer"
           class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
         >
-          → Code
+          -&gt; Code
         </a>
       )}
+
       {links.pitchDeck && (
         <a
           href={links.pitchDeck}
@@ -92,7 +96,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           rel="noopener noreferrer"
           class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
         >
-          → View Pitch Deck
+          -&gt; View Pitch Deck
         </a>
       )}
     </div>
@@ -103,6 +107,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
       <p class="text-xs text-gray-500 mb-2">
         // Pitch Deck
       </p>
+
       <iframe
         src={links.pitchDeck}
         title={`${title} pitch deck`}
@@ -120,7 +125,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           const imageTitle = typeof image === 'string' ? title : image.title;
           const imageDescription =
             typeof image === 'string'
-              ? description.split('\n').join(' • ')
+              ? description.split('\n').join(' - ')
               : image.description;
           const isVideo = typeof image !== 'string' && image.type === 'video';
 
@@ -169,6 +174,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
 
   function closeImageModal() {
     const modal = document.getElementById('image-modal');
+
     if (modal) {
       modal.classList.add('hidden');
       document.body.style.overflow = 'auto';
