@@ -1,6 +1,6 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "title": "Engine Manufacturing Engineering Intern",
     "company": "GE Aerospace",
     "location": "Strother Field, KS",
@@ -33,7 +33,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "Co-Founder & Product Lead",
     "company": "TriPoint Innovations LLC",
     "location": "Stillwater, Oklahoma",
@@ -50,7 +50,7 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "title": "Engineering Director",
     "company": "Large-Scale Mechanical Display Project",
     "location": "Stillwater, Oklahoma",
@@ -65,7 +65,7 @@
     ]
   },
   {
-    "id": 1,
+    "id": 5,
     "title": "Product Engineering Intern",
     "company": "Springfield Remanufacturing Corp. (SRC)",
     "location": "Springfield, Missouri",
