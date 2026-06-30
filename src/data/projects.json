@@ -82,7 +82,9 @@
         "description": "Prototyping and engineering analysis work for a customer."
       }
     ],
-    "links": {},
+    "links": {
+    "live": "https://news.okstate.edu/articles/engineering-architecture-technology/2025/new_product_development_center_turning_ideas_into_real_world_impact"
+    },
     "featured": true
   },
   {
