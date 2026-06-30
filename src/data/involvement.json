@@ -1,37 +1,58 @@
 [
   {
     "id": 1,
-    "name": "American Institute of Aeronautics and Astronautics (AIAA)",
-    "role": "Member",
-    "date": "Fall 2025 - Present",
-    "description": "Active member focused on aerospace systems, propulsion topics, and technical workshops."
-  },
-  {
-    "id": 2,
-    "name": "American Society of Mechanical Engineers (ASME)",
-    "role": "Member",
-    "date": "Fall 2025 - Present",
-    "description": "Active member engaging in mechanical design topics, professional development workshops, and industry focused technical events."
-  },
-  {
-    "id": 3,
-    "name": "FarmHouse Fraternity",
-    "role": "Chapter External Vice President, International Growth Committee Member, House Manager",
-    "date": "Fall 2025 - Present",
-    "description": "Built and managed alumni outreach systems, coordinated large scale events, and handled external communications."
-  },
-  {
-    "id": 4,
-    "name": "Hack OKState",
-    "role": "Participant",
-    "date": "Fall 2025",
-    "description": "Applied engineering principles to rapidly develop and present a prototype solution, emphasizing system design, feasibility, and execution under deadline pressure. Awarded third place overall."
-  },
-  {
-    "id": 5,
     "name": "OSU Mortar Board Top 20 Freshman",
     "role": "Honoree",
     "date": "Fall 2025",
-    "description": "Selected as a Top 20 Freshman and inducted into OSU’s Mortar Board honor society in recognition of academic achievement, leadership, and meaningful campus involvement during the first year of study."
+    "description": "Selected as a Top 20 Freshman and inducted into OSU's Mortar Board honor society in recognition of academic achievement, leadership, service, and meaningful campus involvement."
+  },
+  {
+    "id": 2,
+    "name": "American Institute of Aeronautics and Astronautics (AIAA)",
+    "role": "Member",
+    "date": "Fall 2025 - Present",
+    "description": "Active member focused on aerospace engineering, propulsion systems, technical development, and professional engagement within the aerospace field."
+  },
+  {
+    "id": 3,
+    "name": "American Society of Mechanical Engineers (ASME)",
+    "role": "Member",
+    "date": "Fall 2025 - Present",
+    "description": "Active member engaging in mechanical design, manufacturing, product development, technical workshops, and professional development opportunities."
+  },
+  {
+    "id": 4,
+    "name": "FarmHouse Fraternity",
+    "role": "External Vice President, International Undergraduate Growth Committee Member, House Manager",
+    "date": "Fall 2025 - Present",
+    "description": "Lead external relations, alumni outreach, event coordination, and chapter communication efforts while also contributing to international undergraduate growth initiatives."
+  },
+  {
+    "id": 5,
+    "name": "Hack OKState",
+    "role": "Third Place Overall",
+    "date": "Fall 2025",
+    "description": "Applied engineering problem-solving, rapid prototyping, system design, feasibility analysis, and presentation skills to develop and pitch a prototype solution under deadline pressure."
+  },
+  {
+    "id": 6,
+    "name": "CEAT Scholar",
+    "role": "Scholar",
+    "date": "Oklahoma State University",
+    "description": "Recognized within OSU's College of Engineering, Architecture and Technology for academic achievement, leadership potential, and commitment to engineering excellence."
+  },
+  {
+    "id": 7,
+    "name": "Dean's Honor Roll",
+    "role": "Honoree",
+    "date": "Oklahoma State University",
+    "description": "Earned Dean's Honor Roll recognition for strong academic performance while pursuing dual engineering degrees and a minor in electrical engineering."
+  },
+  {
+    "id": 8,
+    "name": "CORD Gold Certificate",
+    "role": "Service Recognition",
+    "date": "300+ Service Hours",
+    "description": "Recognized for completing more than 300 service hours, reflecting sustained commitment to community involvement, leadership, and volunteer service."
   }
 ]
