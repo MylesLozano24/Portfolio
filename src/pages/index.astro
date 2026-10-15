@@ -130,6 +130,9 @@ import involvementData from '../data/involvement.json';
               <p class="text-lg font-semibold text-white mb-1">
                 {profileData.major}
               </p>
+              <p class="text-gray-400 mb-1">
+                Minor in {profileData.minor}
+              </p>
               <p class="text-gray-400">
                 <span id="osu-easter-egg-trigger" class="cursor-default">
                   {profileData.school}
@@ -270,7 +273,7 @@ import involvementData from '../data/involvement.json';
           <div class="border border-gray-700 rounded p-8">
             <div class="text-sm text-gray-400 mb-6"><span class="text-orange-500">></span> skills --list</div>
             <div class="flex flex-wrap gap-3">
-              {['SolidWorks', 'Autodesk Inventor', 'Fusion', 'GD&T', 'DFM', 'MATLAB', 'CFD', 'FEA', 'SolidWorks Flow', 'Engineering Drawings', 'Oscilloscopes', 'RF Analysis', 'Enclosure Design', 'Tooling & Test Fixtures', 'Injection Molding Design', 'Prototype Manufacturing', 'Sensors, Motors & Actuators', 'Relay Logic & Wiring', 'Embedded Systems', 'ESP32', 'LoRa', 'GPS', 'BLE', 'Low-Power Hardware Integration', 'Python', 'GitHub', 'Excel', 'KiCad', 'FDM Printing'].map((skill) => (
+              {['SolidWorks', 'AutoCAD', 'Autodesk Inventor', 'Fusion', 'GD&T', 'Python', 'MATLAB', 'LabVIEW', 'Mechanical Design', 'Engineering Analysis', 'FEA', 'CFD', 'SolidWorks Flow', 'DFM & Cost Reduction', 'Prototyping & Testing', 'Prototype Manufacturing', 'Manufacturing Processes', 'Injection Molding Design', 'Process Improvement', 'Root Cause Analysis', 'Quality Improvement', 'CAD Documentation', 'Engineering Drawings', 'Technical Documentation', 'Enclosure Design', 'Tooling & Test Fixtures', 'Oscilloscopes', 'RF Analysis', 'Sensors, Motors & Actuators', 'Relay Logic & Wiring', 'Embedded Systems', 'Microcontroller Hardware', 'ESP32', 'LoRa', 'GPS & BLE Systems', 'Low-Power Hardware Integration', 'Systems Integration', 'KiCad', 'FDM Printing', 'GitHub', 'Excel', 'Product Development', 'Project Coordination', 'Business Development', 'Customer Discovery', 'Market Research', 'Product Positioning', 'Grant & Investor Materials', 'Commercialization Planning'].map((skill) => (
                 <span class="border border-white rounded px-4 py-2 text-sm text-white">
                   {skill}
                 </span>

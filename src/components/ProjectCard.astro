@@ -6,10 +6,19 @@ export interface Props {
   role: string;
   date: string;
   tech: string[];
-  images?: Array<string | { src: string; title: string; description: string }>;
+  images?: Array<
+    | string
+    | {
+        src: string;
+        title: string;
+        description: string;
+        type?: "image" | "video";
+      }
+  >;
   links: {
     live?: string;
     github?: string;
+    pitchDeck?: string;
   };
   featured?: boolean;
 }
@@ -27,6 +36,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
         {date}
       </span>
     </div>
+
     <p class="text-sm text-gray-400 mb-3 font-sans">
       {tagline}
     </p>
@@ -34,7 +44,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     <ul class="space-y-1.5 text-gray-300 text-sm font-sans mb-4">
       {description.split('\n').map((point) => (
         <li class="flex items-start">
-          <span class="text-orange-500 mr-2 mt-0.5">→</span>
+          <span class="text-orange-500 mr-2 mt-0.5">-&gt;</span>
           <span>{point}</span>
         </li>
       ))}
@@ -45,6 +55,7 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     <p class="text-xs text-gray-500 mb-2">
       // {role}
     </p>
+
     <div class="flex flex-wrap gap-2 text-xs">
       {tech.map((item) => (
         <span class="text-gray-300">
@@ -54,8 +65,8 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     </div>
   </div>
 
-  {(links.live || links.github) && (
-    <div class="flex gap-4 pt-4 border-t border-gray-700 text-xs mb-4">
+  {(links.live || links.github || links.pitchDeck) && (
+    <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-700 text-xs mb-4">
       {links.live && (
         <a
           href={links.live}
@@ -63,9 +74,10 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           rel="noopener noreferrer"
           class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
         >
-          → Live
+          -&gt; Read about it here
         </a>
       )}
+
       {links.github && (
         <a
           href={links.github}
@@ -73,7 +85,18 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
           rel="noopener noreferrer"
           class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
         >
-          → Code
+          -&gt; Code
+        </a>
+      )}
+
+      {links.pitchDeck && (
+        <a
+          href={links.pitchDeck}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
+        >
+          -&gt; View Pitch Deck
         </a>
       )}
     </div>
@@ -85,9 +108,21 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
         {images.map((image, index) => {
           const imageSrc = typeof image === 'string' ? image : image.src;
           const imageTitle = typeof image === 'string' ? title : image.title;
-          const imageDescription = typeof image === 'string' ? description.split('\n').join(' • ') : image.description;
+          const imageDescription =
+            typeof image === 'string'
+              ? description.split('\n').join(' - ')
+              : image.description;
+          const isVideo = typeof image !== 'string' && image.type === 'video';
 
-          return (
+          return isVideo ? (
+            <video
+              src={imageSrc}
+              controls
+              preload="metadata"
+              class="h-32 w-auto rounded border border-gray-700 object-cover"
+              title={imageTitle}
+            />
+          ) : (
             <img
               src={imageSrc}
               alt={`${title} screenshot`}
@@ -124,13 +159,13 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
 
   function closeImageModal() {
     const modal = document.getElementById('image-modal');
+
     if (modal) {
       modal.classList.add('hidden');
       document.body.style.overflow = 'auto';
     }
   }
 
-  // Close modal on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeImageModal();

@@ -1,17 +1,17 @@
 {
   "name": "Myles Lozano",
-  "headline": "Mechanical and Aerospace engineering student, builder, and problem solver",
+  "headline": "Aerospace Engineering | Mechanical Engineering | Embedded Systems",
   "school": "Oklahoma State University",
-  "major": "Aerospace Engineering & Mechanical Engineering, Minor in Electrical Engineering",
-  "classStanding": "Junior",
-  "location": "Stillwater, Oklahoma",
+  "major": "Aerospace Engineering & Mechanical Engineering",
+  "minor": "Electrical Engineering",
+  "classStanding": "Junior [Spring 2028 Graduation]",
+  "location": "SWO · SGF",
   "email": "24lozanom@gmail.com",
   "socials": {
     "github": "https://github.com/MylesLozano24",
     "linkedin": "https://www.linkedin.com/in/myles-lozano",
     "twitter": "https://twitter.com/myleslozano"
   },
-  "shortBio": "Aerospace and mechanical engineering student with hands-on experience supporting military engine hardware and developing field-ready systems.",
-  "longBio": "I am a dual-major engineering student at Oklahoma State University pursuing B.S. degrees in Aerospace and Mechanical Engineering, with a minor in Electrical Engineering, graduating in May 2028.\n\nIn Summer 2026 I was a Manufacturing Engineering Intern at GE Aerospace - Strother, where I designed VGT inspection tooling and led a Stage 1 nozzle flow investigation for military and commercial propulsion hardware. Before that, I worked on engine remanufacturing at Springfield Remanufacturing Corp., and I currently develop client hardware at the OSU New Product Development Laboratory.\n\nI also co-founded TriPoint Innovations, LLC, where I lead product development of Hunter Radar, an offline GPS/LoRa tracking device backed by a $75,000 USDA grant, and I lead engineering for OSU CEAT's 1st-place automated Homecoming display. I bring a strong work ethic, a rapid learning mindset, and eagerness to take on challenging technical problems."
-
+  "shortBio": "Dual-degree Mechanical and Aerospace Engineering student at Oklahoma State University building at the intersection of mechanical design, embedded systems, product development, and early-stage technology, with hands-on experience supporting military engine hardware and developing field-ready systems.",
+  "longBio": "I am a dual-major engineering student at Oklahoma State University studying Aerospace Engineering and Mechanical Engineering, with a minor in Electrical Engineering.\n\nMy experience spans product development, engineering design, prototyping, and early-stage system development. In Summer 2026 I was a Manufacturing Engineering Intern at GE Aerospace - Strother, where I created 18+ VGT inspection tooling concepts and led a Stage 1 nozzle flow investigation for military and commercial propulsion hardware, earning a GE Aerospace Impact Award. I have also worked on engine remanufacturing at Springfield Remanufacturing Corp., and I currently develop client hardware at the OSU New Product Development Laboratory.\n\nAt TriPoint Innovations, LLC, which I cofounded, I lead product design of Hunter Radar, guiding early-stage hardware from initial idea through prototyping and refinement, backed by a $75,000 USDA grant. I also lead engineering for OSU CEAT's 1st-place automated Homecoming display. I bring a strong work ethic, a rapid learning mindset, and eagerness to take on challenging technical problems."
 }

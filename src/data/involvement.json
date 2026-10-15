@@ -1,10 +1,10 @@
 [
   {
     "id": 1,
-    "name": "FarmHouse Fraternity",
-    "role": "External Vice President",
-    "date": "January 2026 - Present",
-    "description": "Built and managed alumni outreach systems, coordinated large scale events, and handled external communications. Named an Emerging Leader (February 2025) and attended the FarmHouse Leadership Institute (January 2026)."
+    "name": "OSU Mortar Board Top 20 Freshman",
+    "role": "Honoree",
+    "date": "September 2025",
+    "description": "Selected as a Top 20 Freshman and inducted into OSU's Mortar Board honor society in recognition of academic achievement, leadership, service, and meaningful campus involvement."
   },
   {
     "id": 2,
@@ -15,86 +15,100 @@
   },
   {
     "id": 3,
-    "name": "International Undergraduate Growth Committee",
+    "name": "American Institute of Aeronautics and Astronautics (AIAA)",
     "role": "Member",
-    "date": "June 2026 - Present",
-    "description": "Committee member supporting international undergraduate growth."
+    "date": "August 2024 - Present",
+    "description": "Active member focused on aerospace engineering, propulsion systems, technical development, and professional engagement within the aerospace field."
   },
   {
     "id": 4,
+    "name": "American Society of Mechanical Engineers (ASME)",
+    "role": "Member",
+    "date": "August 2024 - Present",
+    "description": "Active member engaging in mechanical design, manufacturing, product development, technical workshops, and professional development opportunities."
+  },
+  {
+    "id": 5,
+    "name": "FarmHouse Fraternity",
+    "role": "External Vice President, International Undergraduate Growth Committee Member, House Manager",
+    "date": "January 2026 - Present",
+    "description": "Lead external relations, alumni outreach, event coordination, and chapter communication efforts while also contributing to international undergraduate growth initiatives (June 2026 - Present). Named an Emerging Leader (February 2025) and attended the FarmHouse Leadership Institute (January 2026)."
+  },
+  {
+    "id": 6,
+    "name": "Hack OKState",
+    "role": "Third Place Overall",
+    "date": "November 2025",
+    "description": "Applied engineering problem-solving, rapid prototyping, system design, feasibility analysis, and presentation skills to develop and pitch a prototype solution under deadline pressure."
+  },
+  {
+    "id": 7,
     "name": "Startup Accelerators",
     "role": "Participant, TriPoint Innovations",
     "date": "November 2025 - Present",
     "description": "Activate, Oklahoma Farm Bureau Business Accelerator (May 2026 - Present), Riata Startup Experience Pre-Accelerator, and the Zink Center for Competitive Innovation (November 2025 - Present)."
   },
   {
-    "id": 5,
-    "name": "Hack OKState",
-    "role": "Participant",
-    "date": "November 2025",
-    "description": "Applied engineering principles to rapidly develop and present a prototype solution, emphasizing system design, feasibility, and execution under deadline pressure. Awarded third place overall."
-  },
-  {
-    "id": 6,
-    "name": "OSU Mortar Board Top 20 Freshman",
-    "role": "Honoree",
-    "date": "September 2025",
-    "description": "Selected as a Top 20 Freshman and inducted into OSU’s Mortar Board honor society in recognition of academic achievement, leadership, and meaningful campus involvement during the first year of study."
-  },
-  {
-    "id": 7,
-    "name": "American Institute of Aeronautics and Astronautics (AIAA)",
-    "role": "Member",
-    "date": "August 2024 - Present",
-    "description": "Active member focused on aerospace systems, propulsion topics, and technical workshops."
-  },
-  {
     "id": 8,
-    "name": "American Society of Mechanical Engineers (ASME)",
-    "role": "Member",
+    "name": "CEAT Scholar",
+    "role": "Scholar",
     "date": "August 2024 - Present",
-    "description": "Active member engaging in mechanical design topics, professional development workshops, and industry focused technical events."
+    "description": "Recognized within OSU's College of Engineering, Architecture and Technology for academic achievement, leadership potential, and commitment to engineering excellence."
   },
   {
     "id": 9,
+    "name": "Dean's Honor Roll",
+    "role": "Honoree",
+    "date": "Fall 2024 - Spring 2026",
+    "description": "Earned Dean's Honor Roll recognition for strong academic performance while pursuing dual engineering degrees and a minor in electrical engineering."
+  },
+  {
+    "id": 10,
+    "name": "CORD Gold Certificate",
+    "role": "Service Recognition",
+    "date": "January 2026",
+    "description": "Recognized for completing more than 300 service hours, reflecting sustained commitment to community involvement, leadership, and volunteer service."
+  },
+  {
+    "id": 11,
     "name": "Monster Energy College Ambassador Team",
     "role": "Ambassador",
     "date": "August 2025 - Present",
     "description": "Member of the Monster Energy College Ambassador Team."
   },
   {
-    "id": 10,
+    "id": 12,
     "name": "Zion Lutheran Church",
     "role": "Peer Minister",
     "date": "January 2026 - Present",
     "description": "Serving as a peer minister."
   },
   {
-    "id": 11,
+    "id": 13,
     "name": "Into the Streets",
     "role": "Volunteer & Site Leader",
     "date": "Fall and Spring 2024 - 2026",
     "description": "Volunteered and led sites for OSU's Into the Streets community service events."
   },
   {
-    "id": 12,
+    "id": 14,
     "name": "OSU Freshman Representative Council & CEAT Freshman Council",
     "role": "Member",
     "date": "August 2024 - May 2025",
     "description": "Represented first-year students in OSU and College of Engineering, Architecture and Technology student government. Attended the To Be and Become Leadership Retreat (May 2025)."
   },
   {
-    "id": 13,
+    "id": 15,
     "name": "OSSAA & MSHSAA Sports Official",
     "role": "Official",
     "date": "May 2022 - Present",
     "description": "Official for the Oklahoma Secondary School Activities Association (since May 2024) and the Missouri State High School Activities Association (since May 2022)."
   },
   {
-    "id": 14,
-    "name": "Academic & Service Honors",
+    "id": 16,
+    "name": "Republic, Missouri Honors",
     "role": "Honoree",
-    "date": "2024 - Present",
-    "description": "CEAT Scholar (August 2024 - Present), Dean's Honor Roll (Fall 2024 - Spring 2026), CORD Gold Certificate for 300+ service hours (January 2026), Top 5% of the Republic High School Class of 2024, and Citizenship Award, Republic, Missouri (May 2024)."
+    "date": "May 2024",
+    "description": "Citizenship Award from Republic, Missouri, and Top 5% of the Republic High School Class of 2024."
   }
 ]

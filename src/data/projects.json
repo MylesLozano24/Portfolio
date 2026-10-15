@@ -2,11 +2,11 @@
   {
     "id": 1,
     "title": "Hunter Radar",
-    "tagline": "Offline GPS/LoRa field communication",
-    "description": "Flagship product of TriPoint Innovations, LLC, backed by a $75,000 USDA grant\nIntegrates ESP32, Python, LoRa, GPS, BLE, and microcontroller hardware\nGroup tracking, boundary alerts, SOS signaling, and waypoint navigation without cell service\n3.5-mile LoRa range and 12+ hour battery life across 2 field trials\n3 prototype versions, 4 tracking nodes, and 3 enclosure iterations",
+    "tagline": "AI-integrated geolocation for hunters",
+    "description": "Flagship product of TriPoint Innovations, LLC, developed through the Riata Startup Experience at Oklahoma State University and backed by a $75,000 USDA grant\nLoRa wireless technology with ESP32, GPS, and BLE for offline and online geolocation\nAI integrated tracking, boundary alerts, SOS signaling, and waypoint navigation for areas without cellular coverage\n3.5-mile LoRa range and 12+ hour battery life across 2 field trials, with 3 prototype versions, 4 tracking nodes, and 3 enclosure iterations\nBusiness model focused on outdoor safety, group coordination, and remote communication for hunters, landowners, and outdoor enthusiasts",
     "role": "Co-Founder & Product Lead",
     "date": "November 2025 - Present",
-    "tech": ["ESP32", "Python", "LoRa", "GPS", "BLE", "Low-Power Hardware"],
+    "tech": ["LoRa", "ESP32", "GPS", "BLE", "AI/ML", "Embedded Systems", "IoT", "Wireless Communication", "Low-Power Hardware"],
     "images": [
       {
         "src": "/HunterRadar1.jpg",
@@ -14,21 +14,110 @@
         "description": "Overview of the Hunter Radar tracking device showing the LoRa-enabled hardware design."
       },
       {
-        "src": "/HunterRadar2.jpg",
+        "src": "/HunterRadar4.jpg",
         "title": "Hunter Radar - Tracking Interface",
         "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
+      },
+      {
+        "src": "/HunterRadar5.jpg",
+        "title": "Hunter Radar - Tracking Interface",
+        "description": "AI-integrated tracking interface displaying real-time geolocation data in areas without cellular coverage."
+      },
+      {
+        "src": "/HunterRadar6.jpg",
+        "title": "Hunter Radar - Field Prototype",
+        "description": "Hunter Radar prototype hardware during development and field testing."
+      },
+      {
+        "src": "/HunterRadar3.jpg",
+        "title": "Hunter Radar - Hardware Development",
+        "description": "Hardware development work for the LoRa-based tracking and communication system."
+      },
+      {
+        "src": "/HunterRadar2.jpg",
+        "title": "Hunter Radar - System Testing",
+        "description": "System testing for offline tracking, group coordination, and remote communication features."
       }
     ],
     "links": {
-      "github": ""
+      "github": "",
+      "pitchDeck": "/HunterRadarPitchDeck.pdf"
     },
     "featured": true
   },
   {
     "id": 2,
+    "title": "NPDL Product Development Work",
+    "tagline": "Product development at OSU",
+    "description": "Mechanical engineering projects at OSU's New Product Development Laboratory across 12 client hardware projects\nWorked with LateraLift LLC, Oil States, One Pass, Hopkins Manufacturing Corporation, shoelace hardware development, and other client-driven product concepts\nApplied CAD, SolidWorks, 3 CFD studies, patent drawing support, and engineering documentation for design development\nBuilt 7 test fixtures and iterated 8+ CAD models through prototyping, product refinement, DFM review, and engineering analysis",
+    "role": "Mechanical Engineering Intern",
+    "date": "August 2025 - Present",
+    "tech": ["CAD", "SolidWorks", "CFD", "DFM", "Prototyping", "Test Fixtures", "Patent Drawings", "Engineering Analysis"],
+    "images": [
+      {
+        "src": "/NPDC1.jpg",
+        "title": "NPDL - Patent Drawings",
+        "description": "CAD and SolidWorks design documentation for product development projects at OSU's New Product Development Laboratory."
+      },
+      {
+        "src": "/NPDC2.jpg",
+        "title": "NPDL - CAD Modeling",
+        "description": "Prototyping and engineering analysis work for a customer."
+      },
+      {
+        "src": "/NPDC3.jpg",
+        "title": "NPDL - CAD Modeling",
+        "description": "Prototyping and engineering analysis work for a customer."
+      },
+      {
+        "src": "/NPDC4.jpg",
+        "title": "NPDL - CAD Modeling",
+        "description": "Prototyping and engineering analysis work for a customer."
+      },
+      {
+        "src": "/NPDC5.jpg",
+        "title": "NPDL - Patent Drawings",
+        "description": "Prototyping and engineering analysis work for a customer."
+      }
+    ],
+    "links": {
+      "live": "https://news.okstate.edu/articles/engineering-architecture-technology/2025/new_product_development_center_turning_ideas_into_real_world_impact"
+    },
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "GE Aerospace Turbine Manufacturing Engineering",
+    "tagline": "Turbine hardware processing and quality improvement",
+    "description": "Supported turbine hardware processing and quality improvement for military and commercial propulsion programs\nCreated and tested 18+ VGT inspection tooling concepts for dimensional checks on features with tolerances up to 0.0006 in.\nLed Stage 1 nozzle flow investigation analyzing TBC thickness, EDM cutback, geometry, and flow performance\nIdentified 3 hardware failure modes and created 5 process improvements for flight-critical turbine hardware",
+    "role": "Manufacturing Engineering Intern (Military MSO)",
+    "date": "Summer 2026",
+    "tech": ["Manufacturing Engineering", "Turbine Hardware", "Autodesk Inventor", "Quality Improvement", "Root Cause Analysis", "Inspection Tooling"],
+    "images": [
+      {
+        "src": "/ge1.jpg",
+        "title": "GE Aerospace - Turbine Hardware",
+        "description": "Turbine hardware processing and manufacturing engineering work."
+      },
+      {
+        "src": "/ge2.jpg",
+        "title": "GE Aerospace - Inspection Tooling",
+        "description": "Inspection tooling and dimensional verification work for aerospace tolerances."
+      },
+      {
+        "src": "/ge3.jpg",
+        "title": "GE Aerospace - Manufacturing Support",
+        "description": "Manufacturing, quality, and process improvement support for propulsion hardware."
+      }
+    ],
+    "links": {},
+    "featured": true
+  },
+  {
+    "id": 4,
     "title": "6.7L Cummins Cost Reduction Engineering",
     "tagline": "Manufacturing cost optimization",
-    "description": "Led teardown and inspection of one 6.7L Cummins engine and four additional engines\nConducted 40 hours of engine testing comparing aftermarket components against OEM standards\nDocumented test results, failure modes, and recommendations\nIdentified potential to reduce per-unit costs by approximately 30%",
+    "description": "Led teardown and inspection of one 6.7L Cummins engine and four additional engines for remanufacturing\nConducted 40 hours of engine testing comparing aftermarket components against OEM standards\nAnalyzed manufacturing processes and documented failure modes, test results, and recommendations\nIdentified potential to reduce per-unit costs by approximately 30% while maintaining quality standards",
     "role": "Product Engineering Intern",
     "date": "Summer 2025",
     "tech": ["Process Engineering", "Cost Analysis", "Manufacturing", "CAD", "Quality Control"],
@@ -42,42 +131,24 @@
         "src": "/6.72.jpg",
         "title": "6.7L Cummins - Aftermarket Part Validation",
         "description": "Disassembled the engine and performed detailed measurements on each component to evaluate multiple aftermarket part combinations per cylinder following the dynamometer test"
-      }
-    ],
-    "links": {},
-    "featured": true
-  },
-  {
-    "id": 3,
-    "title": "NPDL Product Development Work",
-    "tagline": "Client hardware development at OSU",
-    "description": "CAD, prototypes, and test fixtures across 12 client hardware projects\nLateral lift oil recovery using bladder-driven pumping and proprietary valve architecture\nOil States automation with actuator-driven cap installation and production tooling\nOther clients include a new shoelace holder development and Hopkins Manufacturing Corporation\n3 CFD studies, 7 test fixtures, and patent drawings for IP filing",
-    "role": "Mechanical Engineering Intern",
-    "date": "August 2025 - Present",
-    "tech": ["SolidWorks", "CFD", "DFM", "Prototyping", "Test Fixtures", "Mechanical Tooling", "Patent Drawings"],
-    "images": [
-      {
-        "src": "/NPDC1.jpg",
-        "title": "NPDC - CAD Design Work",
-        "description": "CAD and SolidWorks design documentation for product development projects at OSU's New Product Development Center."
       },
       {
-        "src": "/NPDC2.jpg",
-        "title": "NPDC - Prototyping & Analysis",
-        "description": "Prototyping and engineering analysis work for LateraLift LLC and Hopkins Manufacturing Corporation."
+        "src": "/6.73.jpg",
+        "title": "6.7L Cummins - Additional Projects",
+        "description": "Pictured is a GM 2.8L MiniMax engine, one of 6+ engines I disassembled, inspected, and assessed for remanufacturing before sending to production."
       }
     ],
     "links": {},
     "featured": true
   },
   {
-    "id": 4,
+    "id": 5,
     "title": "OSU Homecoming Engineering Build",
-    "tagline": "60 ft animated mechanical display, 1st place",
-    "description": "Led an 8-person engineering team and 30+ laborers building a 60 ft x 18 ft x 12 ft display\nIntegrated 8+ motors and actuators across 6 moving linkages with relay logic and timing controls\nUsed CAD, motion studies, and FEA to find failure causes in 3 metal components, preventing $4,500 in rework\nPlaced 1st of 12 in front of 200,000+ people at OSU Homecoming",
+    "tagline": "60 ft integrated electromechanical system, 1st place",
+    "description": "Led an 8-person engineering team and 30+ laborers building a 60 ft x 18 ft x 12 ft automated display\nBuilt integrated system with electrical control hardware, proximity sensors, and 8+ motors and actuators across 6 moving linkages\nDeveloped relay and control logic for state detection, timing, and event sequencing\nModeled moving components with CAD, motion studies, and FEA, finding failure causes in 3 metal components and preventing $4,500 in rework\nPlaced 1st of 12 in front of 200,000+ people at OSU Homecoming",
     "role": "Engineering Project Lead",
     "date": "Fall 2024 - Present",
-    "tech": ["CAD", "Motion Studies", "FEA", "Motors & Actuators", "Relay Logic", "Systems Integration"],
+    "tech": ["Electrical Systems", "Proximity Sensors", "Control Logic", "Relay Logic", "Motors & Actuators", "Mechanical Modeling", "FEA", "Systems Integration", "Hardware Debugging"],
     "images": [
       {
         "src": "/HOCO1.jpg",
@@ -93,6 +164,17 @@
         "src": "/HOCO3.jpg",
         "title": "OSU Homecoming - Systems Integration",
         "description": "Final hardware-software integration showing the complete electromechanical system after debugging."
+      },
+      {
+        "src": "/HOCO4.jpg",
+        "title": "OSU Homecoming - Final Assembly",
+        "description": "Additional view of the large-scale mechanical display during final assembly and integration."
+      },
+      {
+        "src": "/HOCO.MP4",
+        "title": "OSU Homecoming - Motion System Video",
+        "description": "Video showing the synchronized electromechanical motion system in operation.",
+        "type": "video"
       }
     ],
     "links": {},
