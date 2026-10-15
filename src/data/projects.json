@@ -2,11 +2,11 @@
   {
     "id": 1,
     "title": "Hunter Radar",
-    "tagline": "AI-integrated geolocation for hunters",
-    "description": "Flagship product of TriPoint Innovations LLC\nLoRa wireless technology for offline/online geolocation\nAI-integrated tracking for areas without cellular coverage\nDesigned for hunters and outdoor enthusiasts",
-    "role": "Cofounder & Lead Developer",
-    "date": "Fall 2025",
-    "tech": ["LoRa", "AI/ML", "Embedded Systems", "IoT", "Wireless Communication"],
+    "tagline": "Offline GPS/LoRa field communication",
+    "description": "Flagship product of TriPoint Innovations, LLC, backed by a $75,000 USDA grant\nIntegrates ESP32, Python, LoRa, GPS, BLE, and microcontroller hardware\nGroup tracking, boundary alerts, SOS signaling, and waypoint navigation without cell service\n3.5-mile LoRa range and 12+ hour battery life across 2 field trials\n3 prototype versions, 4 tracking nodes, and 3 enclosure iterations",
+    "role": "Co-Founder & Product Lead",
+    "date": "November 2025 - Present",
+    "tech": ["ESP32", "Python", "LoRa", "GPS", "BLE", "Low-Power Hardware"],
     "images": [
       {
         "src": "/HunterRadar1.jpg",
@@ -28,8 +28,8 @@
     "id": 2,
     "title": "6.7L Cummins Cost Reduction Engineering",
     "tagline": "Manufacturing cost optimization",
-    "description": "Led cost savings initiative for 6.7L Cummins remanufacturing\nAnalyzed manufacturing processes and identified efficiency improvements\nImplemented design changes to reduce production costs\nMaintained quality standards throughout optimization",
-    "role": "New Product Development Intern",
+    "description": "Led teardown and inspection of one 6.7L Cummins engine and four additional engines\nConducted 40 hours of engine testing comparing aftermarket components against OEM standards\nDocumented test results, failure modes, and recommendations\nIdentified potential to reduce per-unit costs by approximately 30%",
+    "role": "Product Engineering Intern",
     "date": "Summer 2025",
     "tech": ["Process Engineering", "Cost Analysis", "Manufacturing", "CAD", "Quality Control"],
     "images": [
@@ -49,12 +49,12 @@
   },
   {
     "id": 3,
-    "title": "NPDC Product Development Work",
-    "tagline": "Product development at OSU",
-    "description": "Mechanical engineering projects at OSU's New Product Development Center\nWorked with LateraLift LLC, a new shoelace holder develpoment, and Hopkins Manufacturing Corporation\nApplied CAD and SolidWorks for design documentation\nPrototyping and engineering analysis for real-world challenges",
+    "title": "NPDL Product Development Work",
+    "tagline": "Client hardware development at OSU",
+    "description": "CAD, prototypes, and test fixtures across 12 client hardware projects\nLateral lift oil recovery using bladder-driven pumping and proprietary valve architecture\nOil States automation with actuator-driven cap installation and production tooling\nOther clients include a new shoelace holder development and Hopkins Manufacturing Corporation\n3 CFD studies, 7 test fixtures, and patent drawings for IP filing",
     "role": "Mechanical Engineering Intern",
-    "date": "Fall 2025",
-    "tech": ["CAD", "SolidWorks", "Prototyping", "Engineering Analysis"],
+    "date": "August 2025 - Present",
+    "tech": ["SolidWorks", "CFD", "DFM", "Prototyping", "Test Fixtures", "Mechanical Tooling", "Patent Drawings"],
     "images": [
       {
         "src": "/NPDC1.jpg",
@@ -73,11 +73,11 @@
   {
     "id": 4,
     "title": "OSU Homecoming Engineering Build",
-    "tagline": "Integrated electromechanical system",
-    "description": "Built integrated system with electrical control hardware and proximity sensors\nDeveloped control logic for state detection and event sequencing\nModeled moving mechanical components for feasibility\nIterated through hardware-software integration and debugging",
-    "role": "Systems Integration Engineer",
-    "date": "Fall 2025",
-    "tech": ["Electrical Systems", "Proximity Sensors", "Control Logic", "Mechanical Modeling", "Systems Integration", "Hardware Debugging"],
+    "tagline": "60 ft animated mechanical display, 1st place",
+    "description": "Led an 8-person engineering team and 30+ laborers building a 60 ft x 18 ft x 12 ft display\nIntegrated 8+ motors and actuators across 6 moving linkages with relay logic and timing controls\nUsed CAD, motion studies, and FEA to find failure causes in 3 metal components, preventing $4,500 in rework\nPlaced 1st of 12 in front of 200,000+ people at OSU Homecoming",
+    "role": "Engineering Project Lead",
+    "date": "Fall 2024 - Present",
+    "tech": ["CAD", "Motion Studies", "FEA", "Motors & Actuators", "Relay Logic", "Systems Integration"],
     "images": [
       {
         "src": "/HOCO1.jpg",
