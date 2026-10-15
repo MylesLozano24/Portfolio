@@ -19,6 +19,7 @@ export interface Props {
     live?: string;
     github?: string;
     pitchDeck?: string;
+    website?: string;
   };
   featured?: boolean;
 }
@@ -65,8 +66,19 @@ const { title, tagline, description, role, date, tech, images, links } = Astro.p
     </div>
   </div>
 
-  {(links.live || links.github || links.pitchDeck) && (
+  {(links.live || links.github || links.pitchDeck || links.website) && (
     <div class="flex flex-wrap gap-4 pt-4 border-t border-gray-700 text-xs mb-4">
+      {links.website && (
+        <a
+          href={links.website}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-white hover:text-orange-500 transition-colors inline-flex items-center"
+        >
+          -&gt; Visit Website
+        </a>
+      )}
+
       {links.live && (
         <a
           href={links.live}

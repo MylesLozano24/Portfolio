@@ -211,7 +211,18 @@ import involvementData from '../data/involvement.json';
                     {exp.title}
                   </h3>
                   <p class="text-lg text-gray-400 mt-1">
-                    {exp.company}
+                    {exp.website ? (
+                      <a
+                        href={exp.website}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="underline hover:text-orange-500 transition-colors"
+                      >
+                        {exp.company}
+                      </a>
+                    ) : (
+                      exp.company
+                    )}
                   </p>
                   <p class="text-sm text-gray-500 mt-1">
                     {exp.location} • {exp.period}
